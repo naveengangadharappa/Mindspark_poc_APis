@@ -1,6 +1,8 @@
 let express = require('express'); 
 let app = express();
+const cors = require('cors');
 const path = require('path');
+app.options('*',cors()); 
 
 app.use('/', express.static(path.join(__dirname, '/ChromeExtension2')));
 app.use('/test',(req,res)=>{
