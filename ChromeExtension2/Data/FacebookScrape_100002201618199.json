@@ -1,0 +1,45 @@
+{
+	"status": "success",
+	"message": null,
+	"data":
+	{
+		"UserID": 500,
+		"SyncID": 6063,
+		"Created": "2021-01-01 00: 26: 12",
+		"DataName": "FacebookScrape",
+		"AccountID": "560147316",
+		"AccountName": "SaltyFoam",
+		"SyncTypes": ["message boxes","messages","contacts"],
+		"AccessToken": "unused",
+		"LastSynced": "2021-01-01 00: 26: 12",
+		"NextSync": null,
+		"SyncData": null,
+		"HasTask": 0,
+		"messages":
+		[
+			{
+				"Type": "fbp_post",
+				"Uid": 2,
+				"Date": "2021-01-01 00:26:12",
+				"Body": "This is a test post.",
+				"Attachments": [
+					{
+						"Type": "image/jpeg",
+						"URL": "https://scontent-arn2-1.xx.fbcdn.net/v/t1.6435-9/204595163_2325038404295396_1560375728169827640_n.jpg?_nc_cat=1&ccb=1-3&_nc_sid=2c4854&_nc_ohc=AjqZCV5FE5UAX86MUMd&_nc_ht=scontent-arn2-1.xx&oh=f26cca19d3feb99fe4c3612454c15158&oe=60D889B4"
+					},
+					{
+						"Type": "video/mp4",
+						"URL": "https://filesamples.com/samples/video/mp4/sample_960x540.mp4"
+					}
+				]
+			},
+			{
+				"Type": "fbp_msg",
+				"Uid": 1,
+				"To": ["qsd <100002201618199@fbperid.socialattache.com>"],
+				"Body": "1",
+				"Attachments": []
+            }
+		]
+	}
+}

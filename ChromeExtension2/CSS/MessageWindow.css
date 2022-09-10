@@ -1,0 +1,39 @@
+#message_window_group
+{
+   height: 100%;
+   width: 100%;
+   table-layout: static;
+}
+
+#message_window_content
+{
+   position: absolute;
+   left: 50px;
+   top: 0px;
+   right: 0px;
+   bottom: 30px;
+   overflow: auto;
+}
+
+#message_window_bottom
+{
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   height: 30px;
+   text-align: center;
+}
+
+#message_yesno_window_group
+{
+   height:100%;
+   width:100%;
+   table-layout:static;
+}
+
+#message_yesno_window_content
+{
+   position: relative;
+   overflow: auto;
+}

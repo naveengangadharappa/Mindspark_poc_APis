@@ -1,0 +1,849 @@
+.SA a
+{
+    text-decoration: none;
+
+    /* palette items... */
+    color: #000;
+}
+
+.SA img
+{
+    border-style: none;   /* remove blue border on clickable images */
+}
+
+.SA ::-webkit-input-placeholder
+{
+    /* palette items... */
+    color: #999;
+}
+.SA :-moz-placeholder
+{
+    /* palette items... */
+    color: #999;
+}
+
+.SA button:disabled
+{
+    color: rgba(255, 255, 255, 0.40);   /* white with 0.4 opacity to match img below */
+}
+.SA button:disabled img
+{
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    zoom: 1;  /* needed to trigger "hasLayout" in IE if no width or height is set */
+}
+
+.SA .content_wrapper
+{
+    position: relative;
+    /*   min-height: 100%; */
+    width: 100%;
+    margin: 0 auto 0 auto;   /* Center content */
+    text-align: center;
+    /*   overflow-y: auto; -webkit-overflow-scrolling: touch; */
+}
+
+.SA .content_column,            /* could be form or div, use only when there will be two columns of data */
+.SA .content_column_narrow      /* two columns on a landscape phone */
+{
+    text-align: left;        /* undo content_wrapper centering */
+
+    display: inline-block;
+    vertical-align: top;
+
+    /*   margin-top: 10px; */
+    /*   margin-bottom: 10px; */
+    /*   padding-top: 5px; */
+    /*   padding-bottom: 5px; */
+
+    /*   border-width: 1px; */
+    /*   border-style: solid; */
+    width: 98%;               /* force one column - going wider than this on iOS brings in horizontal
+                                scrollbars, probably due to input elements going wider */
+
+    /* palette items... */
+    border-color: #999;
+}
+.SA .content_min,                /* use only necessary width */
+.SA .content_max,
+.SA .content_dialog
+{
+    text-align: left;        /* undo content_wrapper centering */
+
+    display: inline-block;
+    vertical-align: top;
+
+    padding: 10px 10px 15px 10px;
+
+    border-width: 1px;
+    border-style: solid;
+
+    /* palette items... */
+    background-color: #fff;
+    border-color: #999;
+}
+.SA .content_max                /* use remaining width, for two columns */
+{
+    overflow: hidden;
+}
+.SA .content_dialog               /* use minimum width unless it's too tiny to look nice */
+{
+    width: auto;
+    max-width:900px;
+    overflow: hidden;        /* use full width on mobile */
+
+    box-sizing:border-box;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+    margin:0;
+    margin: 15px 3px 0px 3px;  /* minimal side spacing on mobile portrait */
+    border-style: none;
+    border-radius: 4px;
+}
+/* this was to add a drop down button to datechooser and timechooser fields but it isn't done correctly (needs to have class on parent)
+.SA .start_row {
+   position: relative;
+}
+
+.SA .start_row::after {
+   content: "";
+   position: absolute;
+   top: 16px;
+   right: 13px;
+   border: 5px solid transparent;
+   border-top: 7px solid #949494;
+   display: block;
+   width: 0;
+   height: 0;
+}
+
+@media screen and (max-width: 768px) {
+   .SA .start_row::after {
+      right: 5px;
+   }
+}
+*/
+
+.SA .navigation-page-content   /* DIV that wraps the navigation menu as well as the page content */
+{
+    display: grid;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.SA .content                    /* could be form or div, use only when there will be one column of data, stretches full width */
+{
+    text-align: left;        /* undo content_wrapper centering */
+
+    display: inline-block;
+    vertical-align: top;
+
+    padding: 0;
+    margin: 0;
+
+    width: 100%;               /* force one column */
+}
+
+.SA .content_centered            /* could be form or div, use only when there will be one column of data, stretches full width */
+{
+    display: inline-block;
+    vertical-align: top;
+
+    padding: 0;
+    margin: 0;
+
+    width: 100%;               /* force one column */
+}
+
+.SA .limit_width {
+    width: 100%;
+    max-width: 1100px;  /* must match wide_table */
+    margin: 0 auto;
+}
+
+.SA #content_table
+{
+    text-align: left;        /* undo content_wrapper centering */
+}
+.SA #main_form {
+    /*   display: inline-block;*/
+    /*   text-align: center;       center content */
+}
+.SA table.wide_table
+{
+    width: 99.9%;               /* force full width of column/page, 100% gives scrollbar for some reason */
+}
+.SA table.data_table
+{
+    border-collapse: collapse;
+    width: 99.9%;               /* force full width of column/page, 100% gives scrollbar for some reason */
+}
+.SA table.data_table td
+{
+    padding: 3px 3px 3px 3px;
+}
+.SA table.data_table thead
+{
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+
+    /* palette items... */
+    background-color: #ddd;
+    color: #000;
+    font-weight: bold;
+    border-color: #ccc;
+}
+.SA table.data_table tfoot
+{
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+
+    /* palette items... */
+    background-color: #ddd;
+    color: #000;
+    font-weight: bold;
+    border-color: #ccc;
+}
+.SA .data_table > thead > tr > th
+{
+    padding-left: 8px;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+
+    /* palette items... */
+    border-color: #666;
+}
+.SA .data_table > tbody > tr > td
+{
+    padding-left: 8px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+
+    /* palette items... */
+    border-color: #ddd;
+}
+.SA .data_table > tbody > tr > td.section_title
+{
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.SA table.sortable thead
+{
+    cursor: pointer;
+}
+.SA table.selectable:not(.selectable_indicators) tr
+{
+    cursor: pointer;
+}
+
+.SA .data_table tr.selected_row
+{
+    /* palette items... */
+    background: #83C3F3;
+}
+
+/* you can apply this class to TR elements to get borders around that rows cells */
+.SA .cell_borders > th,
+.SA .cell_borders > td
+{
+    border: solid 1px black;
+}
+
+.SA .cell_border_top > th,
+.SA .cell_border_top > td
+{
+    border-top: solid 1px black;
+}
+
+.SA .cell_border_bottom > th,
+.SA .cell_border_bottom > td
+{
+    border-bottom: solid 1px black;
+}
+
+.SA .optional
+{
+    display: none;
+}
+.SA .form_actions .optional {
+    display: inline;
+}
+.SA .optional2
+{
+    display: none;
+}
+.SA .optional3
+{
+    display: none;
+}
+.SA .non_mobile_only
+{
+    display: none;
+}
+.SA .mobile_block
+{
+    display: block;
+}
+@media screen and (min-width: 37em) and (min-width: 640px)         /* phone in landscape mode, large tablet in portrait mode */
+{
+    .SA .non_mobile_only
+    {
+        display: inline;
+    }
+    .SA .mobile_only
+    {
+        display: none;
+    }
+    .SA .mobile_block
+    {
+        display: inline;
+    }
+    .SA .content_dialog               /* use minimum width unless it's too tiny to look nice */
+    {
+        min-width: 600px;
+
+        /* space on each side */
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .SA .optional
+    {
+        display: inline;
+    }
+    .SA .neg_optional
+    {
+        display: none;
+    }
+    .SA .window_header a > img
+    {
+        padding-top: 0px;   /* DRL FIXIT! Fix button icon positioning */
+    }
+    .SA table td.optional,
+    .SA table th.optional
+    {
+        display: table-cell;
+    }
+}
+@media screen and (min-width: 1120px)         /* tablet in landscape mode, laptop or desktop, may not be full screen */
+{
+/* DRL This messes up larger displays. If we want this for the tablet landscape we'll need an override for larger displays.
+    .SA .content_column
+    {
+        width: 47%;      /* force two columns * /
+    }
+    .SA .content_column,
+    .SA .content_min,
+    .SA .content_max
+    {
+        /* space between columns * /
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+*/
+
+    .SA .optional2
+    {
+        display: inline;
+    }
+    .SA table td.optional2,
+    .SA table th.optional2
+    {
+        display: table-cell;
+    }
+}
+@media screen and (min-width: 1280px)         /* laptop or desktop, full screen */
+{
+    .SA .content_column_narrow
+    {
+        width: 47%;      /* force two columns */
+
+        /* space between columns */
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .SA .optional3
+    {
+        display: inline;
+    }
+    .SA table td.optional3,
+    .SA table th.optional3
+    {
+        display: table-cell;
+    }
+}
+
+.SA #selection_text
+{
+    display: block;
+    font-size: 75%;
+
+    padding-left: 8px;
+    padding-top: 2px;
+}
+
+/* Not used?
+.SA .close_button
+{
+    position: relative;
+    float: right;
+}
+*/
+/* card stuff should be in CardLayout.css
+.SA td > div.card_content
+{
+    margin: 3px 5px 3px 5px;
+}
+
+.SA div.card_head
+{
+    /*   font-size: 12px;
+       line-height: 25px; * /
+    background-color: #dee5ed;
+    border-bottom: 1px solid #999 !important;
+    /*   height: 25px; * /
+
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+*/
+.SA button.Strings_Translate
+{
+    border: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/v2/Skins/TranslateLt.svg');
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*
+    margin-left: 2px;
+    margin-right: 2px;
+    vertical-align: middle;
+    */
+    /*   float: right; */
+    float: none !important;
+    background-color: #40ff48 !important;
+    margin: 1px 0 0 10px;
+}
+
+/* Scrollable Div inside an iFrame (not used?)
+.SA .scrollableDiv
+{
+   overflow: scroll;
+}
+@supports (-webkit-overflow-scrolling: touch)
+{
+   .SA .scrollableDiv
+   {
+      -webkit-overflow-scrolling: touch;
+   }
+}
+*/
+
+.SA span
+{
+    /* Determines whether a user can select the content of an element. */
+    -webkit-user-select: none !important;
+}
+
+/* Links and images are draggable by default, we also turn on draggable as needed. */
+[draggable]
+{
+    /* Determines whether a user can select the content of an element. */
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    /* below 2 lines css is added for Safari browser */
+    /*   -webkit-user-drag: element; this breaks layout editor dragging from palette on Chrome */
+    -webkit-overflow-scrolling: touch;
+}
+
+.SA #busy_indicator{
+    background-color: #25AAE1;
+}
+
+.SA #busy_indicator_message{
+    border:0;
+    background:transparent;
+    box-shadow:none;
+    color:#fff;
+    letter-spacing:0.3px;
+}
+
+.SA #busy_indicator_message:before{
+    content:'';
+    position:absolute;
+    top: -60px;
+    left:50%;
+    margin-left:-30px;
+
+
+    border: 5px solid #ffffff;
+    border-top: 5px solid #25AAE1;
+    border-radius: 50%;
+    width: 40px;
+    height:40px;
+    animation: spin 1s linear infinite;
+
+}
+
+body.busy_indicator_on {
+    cursor: wait;
+}
+/* This was messing up the OK button in the date and time chooser.
+.SA a:hover,
+    /* DRL FIXIT? These are mostly replaced below * /
+.SA a:active,
+.SA a:focus{
+    background-color:transparent;
+    color: #25AAE1;
+}
+*/
+/*
+.SA a:visited
+{
+   opacity:0.8;
+}
+.SA a:hover
+{
+   opacity:0.8;
+}
+*/
+.SA a:focus
+{
+    /*   opacity:0.8; */
+    color: #9CDEFF;
+}
+.SA a:active   /* must come after hover */
+{
+    /*   opacity:1; */
+    color: #9CDEFF;
+}
+
+.SA table.wide_table {
+    width: 99.9%;
+    max-width: 1100px;  /* must match limit_width */
+    margin: 0 auto;
+    border-collapse:collapse;
+}
+
+.SA table.wide_table tr td {
+    padding: 0;
+}
+
+
+.SA table.labeled_table td:nth-child(2) {
+    margin-bottom: 10px;
+}
+
+.SA .section_title {
+    font-weight: bold;
+    background: #ffffff ;
+    color:#666666;
+    border: 0;
+    padding: 2px 15px 2px !important;
+    /*		font-size: 75%; */
+    /*		text-transform: uppercase; */
+    position:relative;
+    border-top: 1px solid #cecece !important;
+}
+
+.SA div.tab_row {
+    border: 0 !important;
+    margin: 15px;
+    padding: 5px 15px 15px;
+}
+
+/* Various Forms */
+
+.SA select,
+.SA input,
+.SA textarea,
+.SA iframe
+{
+    font-size: 16px;   /* this should prevent zooming in on fields in iOS (looks like it also depends on our 110% font size) */
+
+    /*clear:both;*/
+    /*   display:block;     DRL FIXIT? This made the search toolbar wrap */
+    box-sizing:border-box;
+    background-color:#ffffff;
+    border: 1px solid #cecece;
+    border-radius:5px;
+    padding:3px 5px;
+    /*   width:99.9%; */
+    /*   margin:10px 0; moved to entry_table */
+    margin-bottom: 0.25em;
+    /*color:#333;*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    resize: none;
+}
+.SA iframe.cke_wysiwyg_frame
+{
+    border: none;       /* border styling on CKEditor iframes looks bad */
+}
+.SA .VideoViewer
+{
+    border-radius: 5px;  /* rounded corners to match iframe */
+}
+
+.SA input[type="radio"]{
+    -webkit-appearance: radio;
+    -moz-appearance: radio;
+    appearance: radio;
+}
+
+.SA input[type="checkbox"]{
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+}
+
+.SA input[name=TaskSubject],
+.SA textarea[name=TaskDescription]{
+    width:99.9%;
+    max-width:100%;
+}
+
+.SA input.datechooser + a{
+    border: 1px solid #cecece;
+    border-radius:5px;
+    padding:3px 5px;
+    display:inline-block;
+    margin:5px;
+    /*color:#cecece;*/
+    color: #000;
+    font-size:85%;
+
+}
+
+
+.SA .content_wrapper > .form_actions{
+    display: block;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.SA .content_dialog td{
+    vertical-align:top;
+    padding-bottom:0;
+}
+
+.SA tr.INTERVAL_C_Repeats td,
+.SA tr.BYDAY_C_Repeats td,
+.SA tr.REPEATBY_C_Repeats td,
+.SA tr.ENDS_C_Repeats td,
+.SA tr.SUMM_C_Repeats td{
+    margin-top:0;
+    padding-top:0;
+}
+
+.SA tr.INTERVAL_C_Repeats td span,
+.SA tr.BYDAY_C_Repeats td span,
+.SA tr.REPEATBY_C_Repeats td span,
+.SA tr.ENDS_C_Repeats td span,
+.SA tr.SUMM_C_Repeats td span{
+    padding-right:1em;
+}
+
+.SA #VideoTypeInstructions{
+    margin-top:10px;
+    display: block;
+    font-style: italic;
+    font-size: 85%;
+    padding: 5px 0;
+    color: #b2b2b2;
+}
+
+.SA .content_dialog .datechooser + a {
+    width:99.9%;
+    margin:5px 0;
+    box-sizing:border-box;
+}
+
+.SA .section_sub_title{
+    border: 1px solid;
+    background:#f8f8f8 !important;
+    /*   padding:15px 0 !important;*/
+    vertical-align:middle;
+    border-color: #cecece !important;
+    height:auto;
+    text-align:center;
+    color:#666666;
+}
+/*
+.SA table td.bordered {
+   border-width: 1px;
+   border-style: solid;
+   border-color: #cecece !important;
+}
+*/
+
+@media screen and (min-width: 37em) and (min-width: 640px)
+    /* phone in landscape mode, large tablet in portrait mode */
+{
+/* Not currently used (commented out in PHP code)
+   .SA #CustomTaskRow .clearfix label {
+      float: left;
+      margin-top: 5px;
+   }
+   .SA #CustomTaskRow .clearfix input + a {
+      width: 90%;
+      float: right;
+   }
+   .SA #CustomTaskRow .clearfix .calendar {
+      float: left;
+   }
+ */
+}
+
+/* ------Toggler styles------ */
+.SA .toggler_id,
+.SA .toggler_class  {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/v2/Skins/ExpandGreyOff.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.SA .toggler_opened {
+    background-image: url('chrome-extension://__MSG_@@extension_id__/v2/Skins/ExpandGreyOn.svg');
+}
+
+
+
+/* Paging	*/
+
+.SA .paging-wrapper{
+    text-align:center;
+    /*   margin-bottom:40px; */
+}
+
+
+.SA .topic ~ .paging-wrapper{
+    margin:0;
+}
+
+
+.SA ul.paging{
+    float:none;
+    text-align:center;
+    display:inline-block;
+    margin:0;
+}
+
+.SA ul.paging li {
+    width:24px;
+    height:24px;
+    line-height:24px;
+    display: inline-block;
+    float: none;
+    left:0;
+    padding:0;
+    margin:0;
+    text-align:center;
+    vertical-align:middle;
+    border:1px solid #efefef;
+    position:relative;
+    font-size:14px;
+}
+
+.SA ul.paging li.inactive {
+    border:1px solid #83C3F3;
+}
+
+.SA ul.paging li.auto_width {
+    width:auto;
+    padding:0 1em 0 1em;
+}
+
+.SA ul.paging li:before{
+    display:none;
+}
+
+.SA ul.paging li:first-child{
+    border-radius:5px 0 0 5px;
+}
+
+.SA ul.paging li:last-child{
+    border-radius:0 5px 5px 0;
+    border-right:1px solid #efefef;
+}
+
+.SA ul.paging li a{
+    /*   display:block;
+       width:100%;
+       height:100%;*/
+    cursor: pointer!important;   /* setting the cursor style for A elements made an inline onclick handler work on iOS (an iOS bug where inline onclick handlers aren't called) */
+}
+
+.SA .window_header ul.paging li a{
+    color:#fff;                 /* on the events page the paging is shown in the toolbar (dark BG) */
+}
+
+.SA ul.paging li.inactive a{
+    cursor:default;
+    color:#efefef;
+}
+
+.SA ul.paging li.inactive:after{
+    display:block;
+    content:'';
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+
+}
+
+.SA ul.paging li.current a{
+    background: #efefef;
+    font-weight:700;
+    color:#ff8000;
+}
+
+.SA ul.paging li a:hover,
+.SA ul.paging li a:active/*,
+.SA ul.paging li a:focus*/{
+    background: #efefef;
+    color:#666666;
+}
+
+.SA ul.paging:after{
+    display:block;
+    clear:both;
+    content:'';
+}
+
+.SA .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* DRL FIXIT? This should be somewhere specific to the extension.
+   Profile Container Z-Index Change */
+.SA_profileNameContainerFBElem {
+    z-index: 1 !important;
+}

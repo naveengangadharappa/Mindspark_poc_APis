@@ -1,0 +1,25 @@
+{
+  "result_code": 200,
+  "status": "success",
+  "message": null,
+  "data": {
+    "0": {
+      "VentureID": 0,
+      "Name": "Local Setup (no server)",
+      "RootURL": null,
+      "SkinColor": "#9507c9"
+    },
+    "2300": {
+      "VentureID": 2300,
+      "Name": "Local Setup (localhost.com)",
+      "RootURL": "https://localhost.com",
+      "SkinColor": "#9507c9"
+    },
+    "5": {
+      "VentureID": 5,
+      "Name": "Live Site (socialattache.com)",
+      "RootURL": "https://socialattache.com",
+      "SkinColor": "#9507c9"
+    }
+  }
+}

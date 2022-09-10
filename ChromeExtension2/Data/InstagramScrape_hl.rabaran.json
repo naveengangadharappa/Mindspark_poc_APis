@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "description": "account 1 post 1",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
+    },
+    {
+        "id": 2,
+        "description": "account 1 post 2",
+        "image": "https://personal.psu.edu/hvy5070/Nature.jpeg"
+    }
+]

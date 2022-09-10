@@ -1,0 +1,479 @@
+.SA .window_header,
+.SA .window_footer
+{
+   width: 100%;
+   position: fixed; 
+   height: 40px !important;
+   z-index:100;
+
+   /* this is apparently the easiest way of vertically aligning the elements in the header */
+/*   line-height: 40px;   unfortunately it messes up the MultiSelect
+   vertical-align: middle; */
+
+   /* palette items... */
+   font-size: 120%;
+/* replaced below
+   color: #ccc;
+   background: #83C3F3;
+   border-color: #666;
+*/
+}
+
+.SA .window_header
+{
+   top: 0;
+   border-bottom-width: 2px;
+   border-bottom-style: solid;
+}
+.SA .window_footer
+{
+   bottom: 0;
+   clear: both;
+   border-top-width: 2px;
+   border-top-style: solid;
+
+   text-align: center;   /* center the action buttons */
+}
+
+/* Remove extra space inside buttons in Firefox
+.SA .window_footer input[type="button"]::-moz-focus-inner,
+.SA .window_footer button::-moz-focus-inner {
+   border: none;
+   padding: 0;
+}
+*/
+
+
+.SA #page_title        /* move the title to the left in order to allow space for the filter buttons */
+{
+   position: absolute;
+   top: 8px;
+   left: 0px;
+   right: 0px;
+   text-align: center;
+   z-index: -1;
+
+/* replaced below
+   /* palette items... * /
+   color: #000;
+*/
+}
+
+.SA .window_header .filter_reveal
+{
+   border-top-width: 1px;
+   border-top-style: solid;
+   border-bottom-width: 2px;
+   border-bottom-style: solid;
+
+   /* palette items... */
+   background: #83C3F3;
+/* DRL FIXIT? Do we really need a gradient?
+   background: -webkit-linear-gradient(#9CDEFF, #83C3F3); /* For Safari 5.1 to 6.0 * /
+   background: -o-linear-gradient(#9CDEFF, #83C3F3); /* For Opera 11.1 to 12.0 * /
+   background: -moz-linear-gradient(#9CDEFF, #83C3F3); /* For Firefox 3.6 to 15 * /
+   background: linear-gradient(#9CDEFF, #83C3F3); /* Standard syntax * /
+*/
+   border-color: #666;
+}
+
+.SA .window_header .filter_reveal
+{
+   width: 100%;
+   position: relative;
+   top: 0;
+   height: 55px !important;
+   overflow: auto;
+
+   clear: both;
+   padding: 1px 0 2px 0;
+   margin: 0;
+}
+.SA .window_header .filter_inner        /* allows scrolling the filter horizontally if needed */
+{
+   white-space: nowrap;
+
+   /* this is apparently the easiest way of vertically aligning the elements in the header
+      note that we are a little higher than center to allow for a horizontal scrollbar below */
+/*
+   line-height: 45px;    unfortunately it messes up the MultiSelect
+   vertical-align: middle; */
+
+   padding-left: 8px;
+   clear: both;
+   margin: 0;
+}
+.SA .window_header .filter_inner > a,
+.SA .window_header .filter_inner > button
+{
+   border: none;
+}
+.SA #filter_anchors
+{
+   position: relative;
+   float: right;
+}
+
+.SA .filter_section_toolbar
+{
+   /* palette items... */
+   color: #000;
+}
+/*
+.SA #action_anchors
+{
+   float: left;
+   margin: 0; 
+}
+.SA #action_anchors li
+{
+   display: inline-block;
+}
+.SA #action_anchors a
+{
+   display: block;
+}
+
+.SA .filter_section_toolbar input[type=search],
+.SA .filter_section_inline input[type=search]
+{
+   border-width: 1px;
+   border-style: solid;
+   -moz-border-radius: 0.5em;
+   -webkit-border-radius: 0.5em;
+   -o-border-radius: 0.5em;
+   -ms-border-radius: 0.5em;
+   border-radius: 0.5em;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box; 
+   padding: 0.3em 0.6em 0.3em 0.4em;
+   width: 17em;      /* for small screens * /
+   margin-top: 3px;
+
+   /* palette items... * /
+   background: #888;
+   color: #CCC;
+   border-color: #333;
+   font-size: 75%;
+}
+
+.SA .FilterSelect_Input {
+   background-size: 18px 18px;
+   background-image:url(/Images/NetBizBoom/svg/SearchGrey.svg);
+   background-position:98% 50%;
+   background-repeat:no-repeat;
+   padding-right:16px;
+}
+*/
+
+.SA .filter_inner
+{
+   display: inline-block;
+   padding: 0;
+   border: none;
+   width: 50px;
+   height: 30px;
+}
+
+.SA .filter_inner > div
+{
+   white-space:nowrap;
+}
+/*
+.SA .filter_section_inline
+{
+   padding-top: 10px;
+   padding-bottom: 5px;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+*/
+.SA .filter_section_inline .form_button
+{
+   margin: 0px;   /* button was making search   row too tall */
+}
+
+/* Not used?
+.website_page_title
+{
+   font-weight: bold;
+}
+
+.website_page_name
+{
+   font-style: italic;
+}
+*/
+
+/* DRL FIXIT? Is this for busy indicator or the main menu button? */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.SA .window_header{
+	background: #25AAE1;
+	color:#ffffff;
+	font-size:100%;
+	border:0;
+	-webkit-box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.45);
+	-moz-box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.45);
+	box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.45);
+   position:fixed;
+}
+
+.SA .window_header > a,
+.SA .window_footer > a,
+.SA nav a,
+.SA #filter_anchors a,
+.SA .window_header > button,
+.SA .window_footer > button,
+.SA nav button,
+.SA #filter_anchors button
+{
+   margin: 0;
+   padding-top: 0px;
+   padding-bottom: 0px;
+   padding-left: 5px;
+   padding-right: 5px;
+   text-decoration: none;
+   background: none;
+   
+   box-shadow:none;
+   margin-top: 5px;
+   height: 30px;
+   margin-right: 10px;
+   border-radius: 0px;
+   
+   color: inherit;
+   font: inherit;
+/*   opacity:0.8; */
+   
+   /* palette items... */
+   color:#ffffff;
+   border-color: #666;
+}
+.SA .window_header > a,
+.SA .window_footer > a,
+/* .SA nav a,                  this was breaking menu links */
+.SA .window_header > button,
+.SA .window_footer > button,
+.SA nav.drop_down_menu_left  /* toolbar toggle button, avoid menu buttons */
+{
+   padding-right: 10px;
+   border-right: 1px solid rgba(255,255,255,0.4) !important;
+}
+.SA .window_header > button.close_button,
+.SA #filter_anchors > a,
+.SA #filter_anchors > button,
+.SA nav.drop_down_menu_right  /* toolbar toggle button, avoid menu buttons */
+{
+/*   margin-top: 5px; */
+   padding-left: 10px;
+   border-left: 1px solid rgba(255,255,255,0.4) !important;
+   border-right: none !important;
+}
+
+.SA .window_header a > img
+{
+   padding-top: 5px;   /* DRL FIXIT! Fix button icon positioning */
+}
+.SA .window_header button:disabled,
+.SA .window_footer button:disabled
+{
+   /* palette items... */
+   color: #777;
+}
+/* DRL FIXIT? For some reason this screws up the layout royally?
+.SA .window_footer button:active
+{
+   / * palette items... * /
+   background-color: yellow;
+}
+*/
+
+.SA #filter_anchors a
+{
+   display: inline-block;
+}
+.SA #filter_anchors a.active
+{
+   /* palette items... */
+/*   color: #000; */
+}
+/*
+		.SA button:hover:enabled,
+		.SA button.hover:enabled,
+		.SA .window_header a:hover,
+		.SA .window_header a:focus,
+		.SA .window_footer a:hover,
+		.SA .window_footer a:focus,
+		.SA .window_header button:hover:enabled,
+		.SA .window_header button:focus,
+		.SA .window_footer button:hover:enabled,
+		.SA .window_footer button:focus
+		{
+			color:#ffffff;
+			border:0px;
+			box-shadow:none;
+			opacity:0.8;
+		}
+*/
+            .SA .window_header a > img {
+				padding-top: 0;
+			}
+.SA #filter_anchors a.active,
+.SA #filter_anchors a:hover,
+.SA #filter_anchors button:hover,
+.SA .window_header > button:hover
+{
+/*   opacity:1 !important; */
+}
+/* This was messing up the prev/next buttons when they were shown in the left of the title bar.
+.SA .window_header > button:first-child,
+.SA .window_header > button:first-child:hover {
+    margin-top: 5px;
+    margin-left: 10px;
+    border-left: 1px solid rgba(255,255,255,0.4) !important;
+    height: 30px;
+    padding-left: 10px;
+}
+*/
+.SA .window_header .optional{
+   padding: 0 3px;
+}
+
+.SA .window_header button > .iconsmall{
+   width:24px;
+   height:24px;
+}
+
+.SA #page_title{
+   font-size:120%;
+   color:#fff;
+   /* DRL FIXIT? It would be great if the title could take up the remaining space instead of this fudge! */
+   padding: 0 110px;
+   overflow: hidden;
+   height: 25px;
+}
+
+@media screen and (min-width: 37em) and (min-width: 640px)         /* phone in landscape mode, large tablet in portrait mode */
+{
+   /* this should match the change in "optional" as the menu will get wider */
+   .SA #page_title
+   {
+      /* DRL FIXIT? It would be great if the title could take up the remaining space instead of this fudge! */
+      padding: 0 180px;
+   }
+}
+
+.SA .window_header button + #page_title{
+	display:none;
+}
+
+.SA .filter_section_inline {
+   color: #fff;
+}
+.SA .window_header .filter_reveal {
+    background: #25AAE1;
+    border: 0;
+    box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.45);
+	text-align:center;
+	position:static;
+	height:auto !important;
+   padding:5px 20px 30px;
+	
+    box-sizing: border-box;
+}
+/* not appropriate to show the scroll arrows all the time
+	.SA .window_header .filter_reveal:before {
+		content:'';
+      position:fixed;
+		
+		left:3px;
+      top:50px;
+		width:18px;
+		height:18px;
+		border-radius:50%;
+		background-color: rgba(0,0,0,0.3);
+		background-image: url('/Images/Common/left.png');
+		background-position:50% 50%;
+		background-repeat:no-repeat;
+		background-size:12px 12px;
+	}
+	.SA .window_header .filter_reveal:after {
+		content:'';
+      position:fixed;
+		
+		right:3px;
+      top:50px;
+		width:18px;
+		height:18px;
+		border-radius:50%;
+		background-color: rgba(0,0,0,0.3);
+		background-image: url('/Images/Common/right.png');
+		background-position:50% 50%;
+		background-repeat:no-repeat;
+		background-size:12px 12px;
+	}
+*/
+    .SA .filter_inner {
+		display: inline-block;
+		padding: 0;
+		border: none;
+		width:auto;
+		height:auto;
+	}
+
+
+
+/* added this so the search button in the inline filter area doesn't cause that table row to be taller than the others */
+.SA .filter_section_search_button button
+{
+   line-height: 15px;
+   margin:0px 10px 0px 0;
+}
+
+
+/* Login */
+
+@media screen and (min-width: 37em) and (min-width: 640px)
+   /* phone in landscape mode, large tablet in portrait mode */
+{
+
+   .SA .window_header button + #page_title{
+      display:block;
+   }
+/*
+	.SA content_inline_filter{
+		padding:45px 20px 10px;
+	}
+
+   body.SA.body_has_tall_header > .content_wrapper
+   {
+      padding-top: 110px;       /* allow for header height * /
+   }
+   body.SA.inline_filter_visible > .content_wrapper
+   {
+      padding-top: 0px !important;
+   }
+   body.SA.body_has_tall_header content_inline_filter{
+      padding:110px 20px 10px !important;
+   }
+*/
+}
+
+@media screen and (min-width: 60em)         /* tablet in landscape mode, laptop or desktop, may not be full screen */
+{
+   .SA .window_header .filter_reveal/*,
+   .SA #content_inline_filter*/ {
+      padding:5px 15px;
+      box-sizing: border-box;
+   }
+
+   .SA .window_header .filter_reveal:before,
+   .SA .window_header .filter_reveal:after {
+      display:none;
+   }
+}

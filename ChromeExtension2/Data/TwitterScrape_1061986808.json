@@ -1,0 +1,20 @@
+{
+	"status": "success",
+	"message": null,
+	"data":
+	{
+		"UserID": 500,
+		"SyncID": 6063,
+		"Created": "2021-01-01 00: 26: 12",
+		"DataName": "TwitterScrape",
+		"AccountID": "560147316",
+		"AccountName": "SaltyFoam",
+		"SyncTypes": ["message boxes","messages"],
+		"AccessToken": "unused",
+		"LastSynced": "2021-01-01 00: 26: 12",
+		"NextSync": null,
+		"SyncData": null,
+		"HasTask": 0,
+		"messages" : []
+	}
+}

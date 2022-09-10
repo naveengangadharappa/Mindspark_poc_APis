@@ -1,0 +1,115 @@
+.message_subject,
+.conversation_subject
+{
+    overflow-wrap: anywhere;  /* don't push the column too wide as we don't want horizontal scrolling */
+}
+
+.label-message-status > input[type="checkbox"],
+.label-flagged-status > input[type="checkbox"]
+{
+    display: none;
+}
+
+.label-message-status,
+.label-flagged-status
+{
+    cursor: pointer;
+}
+
+.label-message-status span,
+.label-flagged-status span
+{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+.message_read:checked ~ .read-status-icon {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/v2/Skins/EmailReadDkOff.svg");
+}
+
+.message_read:not(:checked) ~ .read-status-icon {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/v2/Skins/EmailReadDkOn.svg");
+}
+
+.message_unread:checked ~ .read-status-icon {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/v2/Skins/EmailReadDkOn.svg");
+}
+
+.message_unread:not(:checked) ~ .read-status-icon {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/v2/Skins/EmailReadDkOff.svg");
+}
+
+.message_flagged:checked ~ .flagged-status-icon {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/v2/Skins/EmailFlaggedDkOff.svg");
+}
+
+.message_flagged:not(:checked) ~ .flagged-status-icon {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/v2/Skins/EmailFlaggedDkOn.svg");
+}
+
+.message_unflagged:checked ~ .flagged-status-icon {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/v2/Skins/EmailFlaggedDkOn.svg");
+}
+
+.message_unflagged:not(:checked) ~ .flagged-status-icon {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/v2/Skins/EmailFlaggedDkOff.svg");
+}
+
+/* this should be similar to MultiItem_Item */
+.SA .conversation_card .SA_tags div {
+    display: inline-block;
+    border-radius: 15px;
+    border: 1px solid #bbb;
+    background: #f0f0f0;
+    padding: 4px 10px 4px 10px;
+    margin: 3px 3px 3px 0px;
+    font-size:85%;
+    color: #000;
+}
+
+/* the regular paragraph spacing is too much for the conversation card */
+.SA .conversation_card p {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+/* the regular padding on the list_body is too much for the conversation card */
+.SA .conversation_card .list_body {
+    padding: 5px;
+}
+
+.SA .conversation_card img {
+    vertical-align: middle;
+}
+
+.SA .usage_dashboard .message_card,
+.SA .usage_uniconvos .message_card {
+    border: 1px solid #cecece;
+    border-radius: 15px;
+    margin-bottom: 3px;
+}
+
+.SA .usage_dashboard .message_card .list_head,
+.SA .usage_uniconvos .message_card .list_head {
+    border: none !important;
+}
+
+.SA .usage_dashboard .message_card.folder_sent,
+.SA .usage_dashboard .message_card.folder_outbox,
+.SA .usage_dashboard .message_card.folder_drafts,
+.SA .usage_uniconvos .message_card.folder_sent,
+.SA .usage_uniconvos .message_card.folder_outbox,
+.SA .usage_uniconvos .message_card.folder_drafts {
+    margin-left: 50px;
+    margin-right: 3px;
+    border-color: #83C3F3;
+    background-color: #D2E6F5;
+}
+.SA .usage_dashboard .message_card.folder_inbox,
+.SA .usage_uniconvos .message_card.folder_inbox {
+    margin-left: 3px;
+    margin-right: 50px;
+}

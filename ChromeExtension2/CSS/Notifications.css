@@ -1,0 +1,105 @@
+.info_message,
+.success_message,
+.warning_message,
+.error_message,
+.validation_message,
+.busy_message
+{
+   padding:15px 10px 15px 50px;
+   background-repeat: no-repeat;
+   background-position: 10px 5px;
+}
+/* This is for displaying an information message. */
+.info_message
+{
+   color: #00529B;
+   background-color: #BDE5F8;
+   background-image: url("chrome-extension://__MSG_@@extension_id__/Images/Common/Info.png");
+}
+/* This is for displaying a success message as a result of an action. */
+.success_message
+{
+   color: #4F8A10;
+   background-color: #DFF2BF;
+   background-image:url("chrome-extension://__MSG_@@extension_id__/Images/Common/Valid.png");
+}
+/* This is for displaying a warning message as a result of an action. */
+.warning_message
+{
+   color: #9F6000;
+   background-color: #FEEFB3;
+   background-image: url("chrome-extension://__MSG_@@extension_id__/Images/Common/Attention.png");
+}
+/* This is for displaying an error message as a result of an action. */
+.error_message
+{
+   color: #D8000C;
+   background-color: #FFBABA;
+   background-image: url("chrome-extension://__MSG_@@extension_id__/Images/Common/Cancel.png");
+}
+/* This is for displaying a validation error message as a result of submitting a form. */
+.validation_message
+{
+   color: #D63301;
+   background-color: #FFE0A0;
+   background-image: url("chrome-extension://__MSG_@@extension_id__/Images/Common/Attention.png");
+}
+/* This is for displaying a busy message. */
+.busy_message
+{
+   color: #00529B;
+   background-color: #BDE5F8;
+   background-image: url("chrome-extension://__MSG_@@extension_id__/Images/Common/Info.png");
+}
+
+/* message positioning */
+
+.top_large_message
+{
+   top: 1rem;
+   left: calc(50% - 250px);
+   max-width: 500px;
+}
+
+.bottom_large_message
+{
+   bottom: 1rem;
+   left: calc(50% - 250px);
+   max-width: 500px;
+}
+
+.toast_message
+{
+   max-width: 300px;
+   top: 1rem;
+   right: 1rem;
+}
+
+.center_message
+{
+   top: calc(50%);
+   left: calc(50% - 250px);
+   min-width: 500px;
+   max-width: 500px;
+}
+
+
+#notification_window
+{
+   position: fixed;
+   box-shadow: 0 0 20px 3px rgba(0,0,0,.22);
+   z-index: 2258594000;
+   /*width: 100%;   messes up spacing */
+}
+
+@media screen and (max-width: 500px)         /* phone in portrait mode */
+{
+   /* on a small screen just go full width with a little spacing around the edges */
+   .top_large_message,
+   .toast_message,
+   .bottom_large_message
+   {
+      left: 1rem;
+      right: 1rem;
+   }
+}

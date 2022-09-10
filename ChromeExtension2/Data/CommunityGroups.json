@@ -1,0 +1,49 @@
+{
+  "result_code": 200,
+  "status": "success",
+  "message": null,
+  "data": {
+    "7287": {
+      "GroupUid": "fb:702826986773274@fbgroup.socialattache.com",
+      "ResourceID": 7287,
+      "GroupURL": "https:\/\/www.facebook.com\/groups\/702826986773274",
+      "ImportMembers": 0
+    },
+    "7290": {
+      "GroupUid": "fb:1698154787109418@fbgroup.socialattache.com",
+      "ResourceID": 7290,
+      "GroupURL": "https:\/\/www.facebook.com\/groups\/1698154787109418",
+      "ImportMembers": 0
+    },
+    "7292": {
+      "GroupUid": "fb:2421897096@fbgroup.socialattache.com",
+      "ResourceID": 7292,
+      "GroupURL": "https:\/\/www.facebook.com\/groups\/2421897096",
+      "ImportMembers": 0
+    },
+    "7289": {
+      "GroupUid": "fb:1140123159425294@fbgroup.socialattache.com",
+      "ResourceID": 7289,
+      "GroupURL": "https:\/\/www.facebook.com\/groups\/1140123159425294",
+      "ImportMembers": 0
+    },
+    "6266": {
+      "GroupUid": "fb:334817047556190@fbgroup.socialattache.com",
+      "ResourceID": 6266,
+      "GroupURL": "https:\/\/www.facebook.com\/groups\/334817047556190",
+      "ImportMembers": 1
+    },
+    "7286": {
+      "GroupUid": "fb:1439786486213633@fbgroup.socialattache.com",
+      "ResourceID": 7286,
+      "GroupURL": "https:\/\/www.facebook.com\/groups\/1439786486213633",
+      "ImportMembers": 0
+    },
+    "7285": {
+      "GroupUid": "fb:458353151752077@fbgroup.socialattache.com",
+      "ResourceID": 7285,
+      "GroupURL": "https:\/\/www.facebook.com\/groups\/458353151752077",
+      "ImportMembers": 0
+    }
+  }
+}

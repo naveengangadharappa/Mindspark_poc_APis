@@ -1,0 +1,88 @@
+/* these groups shouldn't have the extra spacing as they're not really separate paragraphs */
+.SA .card_content .card_body p:not(.section_group):not(.radio_group):not(.checkbox_group)
+{
+   margin-top:25px;
+   margin-bottom:25px;
+}
+
+.SA .card_body p.highlighted{
+   border-left:5px solid #25AAE1;
+   padding-left:15px;
+}
+
+.SA .card_body p.overdue span.task_date{
+   color: #b23428;
+}
+
+.SA div.card_content {
+   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+   border: 0 !important;
+   border-radius: 4px;
+   overflow: hidden;
+   margin:15px;
+   background-color: #ffffff;
+   padding:5px 15px 15px;
+   border-color: transparent;
+   clear: both;   /* so this DIV starts on the next line (on mobile saw it follow the tab row) */
+}
+
+.SA .card_content .card_head{
+   background-color: transparent;
+   /*   text-transform:uppercase; */
+   padding:8px 0 12px;
+   border-bottom:1px solid #cecece  !important;
+   margin-bottom:15px;
+}
+
+/* icons should be styled for their specific use, not here
+.SA .card_content .iconsmall {
+   display: inline-block;
+   margin: 0 0 0 12px;
+   width: 20px;
+   height: 20px;
+   /*   opacity:0.75; * /
+}
+*/
+
+/*
+.SA div.card_body{
+   padding:0;
+}
+*/
+
+/* bulleted list used in training, but don't break the paging styling */
+.SA .card_body ul:not(.paging)
+{
+   list-style: none;
+   padding-left: 2em;
+}
+.SA .card_body ul:not(.paging) li:before
+{
+   content: "\2022";
+   display: inline-block; width: 1em;
+   margin-left: -1em;
+}
+
+/* numbered list used in training */
+.SA .card_body ol
+{
+   list-style: none;
+   padding-left: 2em;
+   counter-reset: li;
+}
+.SA .card_body ol li
+{
+   counter-increment: li;
+}
+.SA .card_body ol li:before
+{
+   content: counter(li);
+   display: inline-block;
+   width: 1em;
+   margin-left: -1em;
+   margin-left: -1.5em;
+   margin-right: 0.5em;
+   text-align: right;
+   direction: rtl
+}
+

@@ -1,0 +1,224 @@
+/*
+
+The purpose of this file is to have a common starting point between platforms. Differences and bugs should be
+handled here as much as possible so the rest of our styling doesn't have to deal with it.
+
+*/
+
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, fieldset, legend, label, table, header, footer, nav, section
+{
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+
+/* Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html
+{
+   -ms-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+.SA ol,
+.SA ul
+{
+   margin-block-start: 1em;
+   margin-block-end: 1em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
+   padding-inline-start: 40px;
+}
+
+.SA p
+{
+   margin-block-start: 1em;
+   margin-block-end: 1em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
+}
+
+.SA a
+{
+   cursor: pointer !important;   /* setting the cursor style for A elements made an inline onclick handler work on iOS (an iOS bug where inline onclick handlers aren't called) */
+}
+
+.SA input
+{
+   border-style: solid;   /* without this colors don't work properly on OSX Safari */
+}
+
+/* make all buttons look the same */
+.SA button,
+.SA input[type=button],
+.SA input[type=submit]
+{
+   -webkit-appearance: none;
+   color: #333;
+   font: inherit;
+   border: 1px solid #bbb;
+   background: #f0f0f0; 
+/*   background: -moz-linear-gradient(top, #f0f0f0 0%, #bebebe 100%);
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f0f0f0), color-stop(100%, #bebebe));
+   background: -webkit-linear-gradient(top, #f0f0f0 0%, #bebebe 100%);
+   background: -o-linear-gradient(top, #f0f0f0 0%, #bebebe 100%);
+   background: -ms-linear-gradient(top, #f0f0f0 0%, #bebebe 100%);*/
+   background: linear-gradient(to bottom, #f0f0f0 0%, #bebebe 100%);
+/*   -webkit-border-radius: 5px; 
+   -moz-border-radius: 5px; */
+   border-radius: 5px;
+   /* put some space between rows otherwise they touch */
+   margin-top: 2px;
+   margin-bottom: 2px;
+
+   padding: 3px;        /* remove extra padding on left and right in iOS */
+   outline: none;       /* for good measure */
+   overflow: visible;   /* removes extra side padding in IE */
+
+   cursor: pointer;
+}
+.SA button:disabled,
+.SA button.disabled
+{
+   cursor: default;
+}
+
+/*
+.SA button,
+.SA input[type=button]
+{
+   -webkit-appearance: none; 
+   -moz-appearance: none;
+   display: block;
+   margin: 1.5em 0;
+   font-size: 1em; 
+   line-height: 2.5em;
+   color: #333;
+   font-weight: bold;
+   height: 2.5em; 
+   width: 100%;
+   background: #fdfdfd; 
+   background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%); 
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe)); 
+   background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); 
+   background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); 
+   background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); 
+   background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
+   border: 1px solid #bbb;
+   -webkit-border-radius: 10px; 
+   -moz-border-radius: 10px; 
+   border-radius: 10px;
+}
+*/
+.SA input[type=text],
+.SA input[type=url],
+.SA input[type=email],
+.SA input[type=password],
+.SA input[type=tel],
+.SA textarea
+{
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   
+   font: inherit;
+   font-size: 16px;   /* this should prevent zooming in on fields in iOS */
+
+/*   display: block;
+   margin: 0;
+   width: 100%; 
+   height: 40px;
+   line-height: 40px; 
+   font-size: 17px;*/
+   border: 1px solid #bbb;
+   border-radius: 5px;
+}
+
+.SA .square_corners,
+.SA input[type=text].square_corners,
+.SA input[type=url].square_corners,
+.SA input[type=email].square_corners,
+.SA input[type=password].square_corners,
+.SA input[type=tel].square_corners,
+.SA textarea.square_corners
+{
+   border-radius: 0px;
+}
+
+.SA .no_shadow,
+.SA input[type=text].no_shadow,
+.SA input[type=url].no_shadow,
+.SA input[type=email].no_shadow,
+.SA input[type=password].no_shadow,
+.SA input[type=tel].no_shadow,
+.SA select.no_shadow,
+.SA textarea.no_shadow
+{
+   border-style: solid;
+	border-color: #888;
+}
+
+@media screen and (max-width: 640px)         /* mobile phone */
+{
+   /* for mobile screens make radio and check boxes bigger */
+   .SA input[type=checkbox],
+   .SA input[type=radio]
+   {
+      width: 25px; 
+      height: 25px;
+      vertical-align: middle;
+   }
+}
+
+
+/*
+.SA input[type=range]
+{
+   width: 100%;
+}
+
+.SA input[type=range]::-webkit-slider-thumb
+{
+   -webkit-appearance: none;
+
+   width: 44px; 
+   height: 44px;
+   background: #fdfdfd; 
+   background: -moz-linear-gradient(top, #fdfdfd 0%, #bebebe 100%); 
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#bebebe)); 
+   background: -webkit-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); 
+   background: -o-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); 
+   background: -ms-linear-gradient(top, #fdfdfd 0%,#bebebe 100%); 
+   background: linear-gradient(to bottom, #fdfdfd 0%,#bebebe 100%);
+   border: 1px solid #bbb;
+   -webkit-border-radius: 22px; 
+   -moz-border-radius: 22px; 
+   border-radius: 22px;
+}
+*/
+
+/* give clickable items an appropriate cursor */
+.SA a[href],
+.SA input[type='radio'],
+.SA input[type='checkbox'],
+.SA input[type='submit'],
+.SA input[type='image'],
+.SA label[for],
+.SA select,
+.SA button,
+.SA .pointer
+{
+   cursor: pointer;
+}
+
+/* it's hard to hide an element without disrupting any "display" value currently set so we do it with a class instead */
+.SA .hide_element
+{
+   display: none !important;
+}
+
+/* normalize some styles for the Chrome extension elements */
+.SA#popup_window,
+.SA_dropdown-menu-popup
+{
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 17px;
+}

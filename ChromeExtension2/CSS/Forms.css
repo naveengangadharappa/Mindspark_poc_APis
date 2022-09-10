@@ -1,0 +1,840 @@
+.SA table.entry_table, table.simple_table
+{
+   vertical-align: top;
+   margin: 0;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 0;
+   width: 98%;               /* force full width of column/page */
+   
+   /* space between rows, and also needed for rounded corners on table cells (although this isn't working still) */
+   border-collapse: separate;
+   /*   border-spacing: 0 0.75em; */
+}
+.SA table.centered_table
+{
+   width: auto;               /* centered table doesn't take full width */
+}
+.SA table.entry_table > tbody,
+.SA .entry_table > tbody > tr,
+.SA table.simple_table > tbody,
+.SA .simple_table > tbody > tr
+{
+   width: 99.9%;               /* force rows to take all available width */
+}
+.SA .entry_table > tbody > tr > td,
+.SA .simple_table > tbody > tr > td
+{
+   padding-top: 0.5em;
+   padding-bottom: 0.5em;
+}
+/*
+.SA .entry_table > tbody > tr:first-child > td:not(:first-child),
+.SA .simple_table > tbody > tr:first-child > td:not(:first-child)
+{
+   padding-top: 0px;
+}
+
+.SA .entry_table > tbody > tr:last-child > td,
+.SA .simple_table > tbody > tr:last-child > td
+{
+   padding-bottom: 0px;
+}
+*/
+.SA .entry_table > tbody > tr > td:first-child,
+.SA .simple_table > tbody > tr > td:first-child
+{
+   padding-right: 0.75em;
+   padding-top: 0.5em;
+}
+
+
+.SA table.entry_table > tbody > tr > td {           /* convert "label : input field [description]" on a row to one above the other */
+   display: block;
+}
+.SA table.entry_table > tbody> tr
+{
+   display: block;
+}
+
+.SA table.entry_table > tbody > tr > td > input:not([type=radio]):not([type=checkbox]),
+.SA table.simple_table > tbody > tr > td > input:not([type=radio]):not([type=checkbox]),
+.SA table.entry_table > tbody > tr > td > select,
+.SA table.simple_table > tbody > tr > td > select,
+.SA table.entry_table > tbody > tr > td > textarea,
+.SA table.simple_table > tbody > tr > td > textarea,
+.SA table.entry_table > tbody > tr > td > iframe,
+.SA table.simple_table > tbody > tr > td > iframe,
+.SA table.entry_table > tbody > tr > td > table,
+.SA table.simple_table > tbody > tr > td > table
+{
+   width: 99.9%;               /* stretch fields to take all available width */
+}
+.SA div.card_body > input,
+.SA div.card_body > select,
+.SA div.card_body > textarea,
+.SA div.card_body > iframe /*,
+.SA div.card_body > table*/
+{
+   width: 99.9%;               /* stretch fields to take all available width */
+}
+/*
+.SA div.MultiItem_Item > input,
+.SA div.MultiItem_Item > select,
+.SA div.MultiItem_Item > textarea/*,
+.SA div.MultiItem_Item > table* /
+{
+   width: 95%;               /* stretch fields to take all available width, but leave space for the X * /
+}
+*/
+/*
+.SA table.entry_table > tbody > tr > td > input.three_way_split,
+.SA table.simple_table > tbody > tr > td > input.three_way_split
+{
+   width: 31%;               /* stretch fields to take only 1/3 available width
+}
+*/
+.SA table.entry_table > tbody > tr > td > input.auto_width,
+.SA table.simple_table > tbody > tr > td > input.auto_width
+{
+   width: auto;              /* override the stretching */
+}
+.SA table.entry_table td:nth-child(1)
+{
+   font-weight: bold;
+/*   font-size: 110%; */
+   margin-top: 10px; /* a little space between what would otherwise be rows */
+/*   font-weight: 700;
+   font-size: 90%; */
+   /*padding-top: 8px;*/
+   vertical-align:top;
+   clear:both;
+}
+/*
+.SA table.entry_table > tbody > tr > td:nth-child(3) {   /* third column is the description *
+   width: 100%;
+   font-size: 80%;
+}
+*/
+
+.SA table.entry_table td #Repeats_INTERVAL,
+.SA table.entry_table td #Repeats_COUNT,
+.SA table.entry_table td #Repeats_UNTIL + a {
+   width: auto !important;
+   min-width:80px;
+   display: inline-block;
+   
+}
+
+.SA table.entry_table td.entry_buttons
+{
+   font-weight: bold;
+   
+   /* palette items... */
+   border-color: #ddd;
+}
+.SA table.labeled_table td:nth-child(1)
+{
+   font-weight: bold;
+   font-size: 110%;
+}
+/* why were we going for full width buttons?
+.SA table.simple_table > tbody > tr > td > button,
+.SA table.simple_table > tbody > tr > td > input[type="submit"]
+{
+   width: 99.9%;
+}
+
+.SA table td.bordered
+{
+   border-width: 1px;
+   border-style: solid;
+
+   /* palette items... * /
+   border-color: #666 #ccc #ccc #666;
+}
+*/
+
+.SA .success_row
+{
+   /* palette items... */
+   background: #DFF2BF;
+}
+.SA .warning_row
+{
+   /* palette items... */
+   background: #FEEFB3;
+}
+.SA .error_row
+{
+   /* palette items... */
+   background: #A01010;
+}
+
+.SA .validation_error:not(div),
+.SA input[type=text].validation_error,
+.SA input[type=url].validation_error,
+.SA input[type=email].validation_error,
+.SA input[type=password].validation_error,
+.SA input[type=tel].validation_error,
+.SA input[type=checkbox].validation_error,
+.SA input[type=radio].validation_error,
+.SA select.validation_error,
+.SA textarea.validation_error,
+.SA div.validation_error    /* for CKEditor */
+{
+   /* palette items... */
+   border-color: #f90000;
+   background-color: #FFDFE4;
+}
+
+.SA div.validation_error,
+.SA input.validation_error + label,
+.SA input.validation_error + label
+{
+   /* palette items... */
+   color: #f90000;
+}
+
+.SA input.image_selector      /* hide the radio/checkbox */
+{
+   visibility: hidden; /* Makes input not-clickable */
+   position: absolute; /* Remove input from document flow */
+/*   position: absolute;
+   left: -9999px;*/
+}
+
+.SA input.image_selector + label > img,  /* label next to the input */
+.SA label.image_selector > input + img   /* label wrapping the input */
+{
+   cursor: pointer;
+}
+
+.SA input.image_selector:checked + label > img,  /* label next to the input */
+.SA label.image_selector > input:checked + img   /* label wrapping the input */
+{
+   border: 1px solid #fff;
+   box-shadow: 0 0 3px 3px #090;
+}
+
+.SA .section_title,
+.SA .section_sub_title
+{
+   padding-top: 5px;
+   padding-bottom: 5px;
+   padding-right: 5px;
+   padding-left: 5px;
+   
+   border-width: 2px;
+   border-style: solid;
+   
+   /* I had to increase the height to get a button to fit on iPhone */
+   height: 35px;
+}
+.SA .section_title
+{
+   /* palette items... */
+   font-weight: bold;
+   background: #ccc;
+   border-color: #ccc #666 #666 #ccc;
+}
+.SA .section_sub_title
+{
+   /* palette items... */
+   font-weight: normal;
+   background: #eee;
+   border-color: #ccc #666 #666 #ccc;
+}
+.SA .section_title a,
+.SA .section_title button
+{
+   /* Remove all decorations to look like normal text */
+   background: none;
+   border: none;
+   display: inline;
+   font: inherit;
+   margin: 0;
+   outline: none;
+   outline-offset: 0;
+   box-shadow: none;
+   cursor: pointer;
+   float: right;
+   
+   /*   padding: 0.75em 0.8em; */
+   padding: 0;
+   height: 100%;
+/* removed for events page, not sure if it's used elsewhere?
+   border-left-width: 1px;
+   border-left-style: solid;
+*/
+   
+   /* palette items... */
+   color: #000;
+   border-color: #666;
+}
+.SA .section_description
+{
+   padding-top: 5px;
+   padding-bottom: 5px;
+   padding-right: 5px;
+   padding-left: 5px;
+   
+   border-width: 1px;
+   border-style: solid;
+   
+   /* palette items... */
+   background: #eee;
+   border-color: #ccc #666 #666 #ccc;
+}
+
+.SA .section_group {
+   border: 0;
+   position: relative;
+   /*padding-bottom: 15px;*/
+}
+
+.SA .centered_table_header
+{
+   height: 41px;           /* allow for height of table row which is now floating over the content */
+}
+
+.SA .centered_table_header > TD
+{
+   height: 35px;           /* must match section_title height */
+}
+
+/* Remove the above and below spacing added by P styling. */
+/*.SA .section_group,*/
+.SA .entry_table .radio_group,
+.SA .entry_table .checkbox_group
+{
+   margin: 0px;
+}
+
+.SA .section_group > label,
+.SA .radio_group > label,
+.SA .checkbox_group > label
+{
+   display: block;
+   margin:10px 0;
+}
+/* DRL Not sure what this was added for?
+.SA .section_group  #searchIcon {
+   position: absolute;
+   right: 5px;
+   top: 15px;
+   width: 18px;
+   height: 18px;
+}
+*/
+
+.SA .section_group input + .MultiItem button,
+.SA .section_group select + .MultiItem button{
+   margin-top:0;
+   /*   margin-bottom:15px; */
+}
+
+.SA table.entry_table{
+   border-collapse: collapse;
+}
+
+.SA table.entry_table td input:not[type="radio"],
+.SA table.entry_table td input:not[type="checkbox"],
+.SA table.entry_table td textarea,
+.SA table.entry_table td iframe
+{
+   width:99.9% !important;
+}
+
+.SA table td input.three_way_split,
+.SA table td select.three_way_split {
+   width: 99.9% !important;
+   display: inline-block;
+   /*   float: left; */
+   margin-right: 0.5%;
+}
+.SA table td input.always_three_way_split,
+.SA table td select.always_three_way_split
+{
+   width: 31% !important;
+   display: inline-block;
+   /*      float: left; */
+   margin-right: 0.5%;
+}
+.SA table td input.always_two_way_split,
+.SA table td select.always_two_way_split
+{
+   width: 49% !important;
+   display: inline-block;
+   /*      float: left; */
+   margin-right: 0.5%;
+}
+
+.SA table td .centered
+{
+   margin: 0 auto;
+}
+
+.SA .three_way_split:last-child,
+.SA .always_three_way_split:last-child,
+.SA .always_two_way_split:last-child
+{
+   margin-right: 0;
+}
+
+/* This doesn't seem to be used, relevant styling is in LayoutAppContent.css
+.SA .content_dialog {
+   padding: 5px 8px 5px 15px;
+   margin-bottom: 20px;
+   border: 2px solid #efefef;
+   border-radius: 10px;
+}
+*/
+
+.SA .content_dialog td input[type="radio"] {
+   display: inline-block;
+   width: 16px !important;
+   height: 16px;
+   max-width: initial;
+   min-width: initial;
+   margin: 0 5px 4px 0; /* alignment for "default" selector for contact phones/emails/addresses/ims */
+   vertical-align: middle;
+}
+
+
+.SA .form-tip {
+   /*   display: block; */
+   font-style:italic;
+   font-size: 85%;
+   padding: 5px 5px 5px 26px;
+   color: #868686;
+   background: url(chrome-extension://__MSG_@@extension_id__/v2/Skins/TipsDk.svg) 3px 50% no-repeat;
+   background-size:16px 16px;
+}
+
+.SA table.entry_table td.entry_buttons{
+   border:0;
+   padding-bottom:0;
+}
+
+.SA .entry_buttons .optional{
+   color:#ffffff;
+   opacity:1;
+   padding: 0 5px;
+}
+
+.SA div.justify > input,
+.SA div.justify > select,
+.SA div.justify > textarea
+{
+   margin-bottom: 0.5em;
+   width: 99.9%;               /* stretch fields to take all available width */
+}
+
+@media screen and (min-width: 37em) and (min-width: 640px)
+   /* phone in landscape mode, large tablet in portrait mode */
+{
+   .SA table.entry_table > tbody > tr > td      /* convert to showing on a row instead of one above the other */
+   {
+      display: table-cell;
+      /* The below is added for drag-and-drop of MultiItem. This was added because while dragging the fields in the table on devices the
+      ghost image was going outside or we can say is being created too far. So in order to prevent it on mobile devices and ipad
+      we added its position to be relative */
+      position: relative !important;
+   }
+   .SA table.entry_table > tbody> tr
+   {
+      display: table-row;
+   }
+   /*
+   .SA table.entry_table > tbody > tr > td:nth-child(3)   /* third column is the description *
+   {
+      width: 25%;
+   }
+   */
+
+   .SA .section_title a {
+      padding:4px 4px 4px 8px;
+   }
+   .SA .section_title a .iconsmall{
+      margin-left:5px;
+   }
+
+   .SA .content_dialog td{
+      padding-bottom:10px;
+   }
+   
+   /*.SA table.entry_table td:nth-child(1) {
+      padding-top: 13px;
+      width:20%;
+   }*/
+
+   .SA table td input.always_three_way_split,
+   .SA table td select.always_three_way_split,
+   .SA table td input.three_way_split,
+   .SA table td select.three_way_split
+   {
+      width: 32% !important;
+      display: inline-block;
+      /*      float: left; */
+      margin-right: 0.5%;
+   }
+   /*
+   .SA .three_way_split:last-child {
+      margin-right: 0;
+   }
+   */
+
+   .SA .section_group > label,
+   .SA .radio_group > label,
+   .SA .checkbox_group > label
+   {
+      display: inline-block;
+      margin: 2px 20px 8px 0;
+   }
+   
+   /*.SA .section_group label:last-of-type {
+      margin-right:0;
+   }*/
+
+   .SA div.justify {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   .SA div.justify label {
+      margin: 0;
+      margin-right: 10px;
+   }
+}
+
+
+.SA button.form_button,
+.SA input[type=button].form_button,
+.SA button.dz-button /* dropzone button for FileUpload.js */
+{
+   cursor: pointer;
+   font-size: 100%;
+   line-height: 20px;
+   color: #fff;
+   border: 0;
+   height: 40px;   /* this is the height the button will be with an icon so make them all the same height regardless of icon */
+   width: auto;
+   /*   opacity: 0.8; */
+   background:transparent;
+   background-color: #25AAE1;
+   border-radius: 5px;
+   padding: 5px;
+   transition: all .5s;
+   margin:8px 10px 8px 0;
+}
+
+.SA button.form_button:hover,
+.SA button.form_button:active,
+.SA button.form_button:focus,
+.SA input[type=button].form_button:hover,
+.SA input[type=button].form_button:active,
+.SA input[type=button].form_button:focus {
+   /*   opacity:1; */
+   background-color: #9CDEFF;
+}
+/* Color covered above and the extra styling isn't needed?
+.SA button.form_button:active,
+.SA input[type=button].form_button:active {
+    border: 0;
+    box-shadow: none;
+    background-color: #9CDEFF;
+}
+*/
+.SA button.form_button:disabled,
+.SA input[type=button].form_button:disabled {
+   cursor: default;
+   background-color: #83C3F3;
+}
+
+
+
+.SA .alt_section_title {
+   background-color: #25AAE1;
+   color: white;
+   height: auto;
+   padding-top: 8px !important;
+   padding-bottom: 8px !important;
+   border-top: 0 !important;
+}
+
+.SA #content_inline_filter{
+   box-sizing:border-box;
+   text-align:left;
+/*   padding:45px 5px 10px; */
+   border-bottom: 1px solid #cecece;
+   background:#bababa;
+}
+.SA .filter_section_inline .iconsmall{
+   margin-right:10px;
+}
+
+.SA .filter_section_inline select,
+.SA .filter_section_inline input
+{
+   background-color:#ffffff;
+   border: 1px solid #cecece;
+   border-radius:3px;
+   padding:3px 5px;
+   font-size: 85%;
+   width:100%;
+   max-width:200px;
+   margin-top:4px;
+   color:#333;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   display:inline-block;
+}
+
+.SA .filter_section_inline select {
+   background-image:url(chrome-extension://__MSG_@@extension_id__/Images/Common/dropdown.png);
+   background-position:98% 50%;
+   background-repeat:no-repeat;
+   padding-right:16px;
+}
+
+.SA .filter_section_toolbar input[type=search],
+.SA .filter_section_inline input[type=search]
+{
+   background-size: 18px 18px;
+   background-image:url(chrome-extension://__MSG_@@extension_id__/v2/Skins/SearchGrey.svg);
+   background-position:98% 50%;
+   background-repeat:no-repeat;
+   padding-right:16px;
+}
+
+.SA .filter_section_inline input[type=search]
+{
+   max-width:none;
+}
+
+.SA #selection_text {
+   padding-left: 15px;
+   color: #fff;
+   margin-top: 10px;
+   border-top: 1px solid rgba(255,255,255,0.2);
+   padding-top: 10px;
+   padding-bottom: 0;
+/*   opacity:0.8; */
+}
+
+.SA select,
+.SA .DateAndTimeChooser_Selector,
+.SA .is-selectbox.snippet-cat /* right side palette drop down list */
+{
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   
+   background-image:url(chrome-extension://__MSG_@@extension_id__/Images/Common/dropdown.png);
+   background-position:98% 50%;
+   background-repeat:no-repeat;
+   padding-right:16px;
+}
+
+/* remove the drop down icon from the drop down menu list */
+.SA select.DropDownMenu
+{
+   background-image:none;
+   padding-right:5px;
+}
+
+/* added this so the search button in the inline filter area doesn't cause that table row to be taller than the others */
+.SA .filter_section_search_button
+{
+   cursor: pointer;
+   color: #fff;
+   border: 0;
+   height: auto;
+/*   opacity: 0.8; */
+   background:transparent;
+   background-color: #25AAE1;
+   border-radius: 5px;
+   padding: 5px;
+   transition: all .5s;
+   line-height: 20px;
+   margin:0px 10px 0px 0;
+}
+
+.SA .filter_section_search_button:hover
+{
+   background-color: #9CDEFF;
+   color: #fff;
+/*   opacity: 0.8; */
+}
+
+.SA .tab_radio_button
+{
+   position: absolute;
+   left: -9999px;;
+}
+
+.SA .tab_radio_label
+{
+   display: block;
+   position: relative;
+   border-radius: 5px 5px 0 0;
+   height: 36px;
+   float: left;
+   margin-right: 2px;
+   text-align: center;
+   line-height: 36px;
+   cursor: pointer;
+   margin-bottom:-1px;
+   background:#eee;
+   color:#777;
+   transition: all .5s;
+/*   opacity: 0.8; */
+   padding: 0 28px 0 4px;
+   overflow: hidden;
+   text-overflow: clip;
+}
+
+.SA .tab_add_button:hover,
+.SA .tab_radio_label:hover
+{
+   background: #ccc;
+}
+
+.SA .tab_remove_button
+{
+   position: absolute;
+   top: 0px;
+   right: 0px;
+   cursor: pointer;
+   color: #222;
+   border-radius: 30px;
+   background: transparent;
+   font-size: 27px;
+   font-weight: bold;
+   display: inline-block;
+   line-height: 0px;
+   padding: 10px 0;
+   margin: 8px 4px 8px 0;
+   width: 20px;
+}
+
+.SA .tab_radio_button:checked+label
+{
+   color: #fff;
+   background: #25AAE1;
+}
+
+.SA .tab_radio_button:checked+label > .tab_remove_button:before,
+.SA .tab_radio_button:checked+label > .tab_remove_button:after
+{
+   background-color: #fff;
+}
+.SA .tab_remove_button:hover
+{
+   background-color: #ddd;
+}
+.SA .tab_radio_button:checked+label > .tab_remove_button:hover::before,
+.SA .tab_radio_button:checked+label > .tab_remove_button:hover::after
+{
+   background-color: #222;
+}
+
+.SA .tab_remove_button:before,
+.SA .tab_remove_button:after {
+   position: absolute;
+   left: 9px;
+   top: 3px;
+   content: ' ';
+   height: 14px;
+   width: 2px;
+   background-color: #222;
+}
+.SA .tab_remove_button:before {
+  transform: rotate(45deg);
+}
+.SA .tab_remove_button:after {
+  transform: rotate(-45deg);
+}
+
+
+.SA .tab_add_button
+{
+   width: 36px;
+   font-size: 30px;
+   padding: 0;
+}
+.SA .tab_add_button:before
+{
+   content: "+";
+}
+
+/**
+ * Styles for Dropzone template
+ */
+
+.SA .dropzone.FileUpload *
+{
+   pointer-events: none;
+}
+.SA .dz-drag-hover.FileUpload {
+   border: 2px dashed #ddd;
+   padding: 4px;
+   border-radius: 5px;
+}
+.SA .FileUpload .dz-preview
+{
+   border: 1px solid #bbb;
+   border-radius: 5px;
+   padding: 8px;
+   margin-top: 1em;
+   position: relative;
+}
+.SA .FileUpload .dz-progress
+{
+   opacity: 1;
+   z-index: 1000;
+   pointer-events: none;
+   height: 16px;
+   background: #ddd;
+   -webkit-transform: scale(1);
+   border-radius: 8px;
+   overflow: hidden;
+}
+.SA .FileUpload .dz-upload
+{
+   background: linear-gradient(to bottom, #25AAE1, #9CDEFF);
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   width: 0;
+}
+.SA .FileUpload .dz-remove
+{
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   top: 4px;
+   right: 4px;
+   background-image: url(chrome-extension://__MSG_@@extension_id__/v2/Skins/CancelDk.svg);
+   background-size: 20px 20px;
+   cursor: pointer;
+   pointer-events: all;
+}
+
+/* DRL FIXIT? Are the following only used for layout editor? If so move to LayoutEditor.css */
+.SA .AddRemoveSelector_Container
+{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   width: 100%;
+}
+.SA .AddRemoveSelector_Container select
+{
+   align-self: flex-start;
+   flex-grow: 1;
+}
+

@@ -1,0 +1,56 @@
+/* regular dashboard */
+.SA .message_card .message_recipient,
+.SA .message_card .message_date,
+.SA .message_card .event_date,
+.SA .message_card .task_date,
+.SA .message_card .history_date
+{
+	font-weight: bold;
+}
+.SA .message_recipient
+{
+	display: inline-block;
+	/* break words that are too long otherwise it the page gets wider than the browser */
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
+/*.card_body p > b:after, This is way too broad, be more specific like below. */
+/*.card_body .message_date:after,*/
+/* regular dashboard */
+.SA .card_body .event_date:after,
+.SA .card_body .task_date:after,
+.SA .card_body .contact_history_title:after,
+/* quick view dashboard */
+.SA .entry_table .event_date:after,
+.SA .entry_table .task_date:after,
+.SA .entry_table .contact_history_title:after
+{
+	/* put this item on a new line */
+	display:block;
+	content:'';
+	clear:both;
+	margin-bottom:5px;
+}
+.SA .card_body .task_description:before,
+.SA .entry_table .task_description:before
+{
+	/* put this item on a new line */
+	display:block;
+	content:'';
+	clear:both;
+	margin-bottom:5px;
+}
+
+/* regular dashboard */
+.SA .card_body .task_option,
+.SA .card_body .event_option,
+	/* quick view dashboard */
+.SA .entry_table .event_option,
+.SA .entry_table .task_option
+{
+	margin:0 30px 0 0;
+	font-size:80%;
+/*   text-transform:uppercase; */
+/*   color:#ababab; */
+}

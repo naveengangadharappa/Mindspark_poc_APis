@@ -1,0 +1,179 @@
+.SA.dropdown-menu {
+    position: relative;
+    display: inline-block;
+    top: 10px;
+}
+
+.SA.dropdown-menu.social{
+    top: unset;
+}
+
+.SA.dropdown-menu > span {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    top: -10px;
+}
+
+.SA.dropdown-menu.social > span{
+    top: 0;
+}
+
+.SA_dropdown-menu-popup > span,
+.SA_dropdown-menu-popup > div,
+.SA_dropdown-menu-popup li > div
+{
+    cursor: pointer;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    display: block;
+}
+
+.SA.dropdown-menu > div {
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.SA.dropdown-menu > span:focus ~ div {
+    display: block;
+}
+
+.SA.dropdown-menu > ul {
+    position: absolute !important;
+    z-index: 2;
+    display: none;
+    /*transition: visibility 0.5s;
+    opacity: 0;*/
+
+    max-height: 240px;
+    overflow: hidden;   /* had to hide it for OSX Safari otherwise it prevented clicking on items under menu - it's show below */
+}
+
+.SA.dropdown-menu > ul.dropdown-menu-visible {
+    display: block;
+}
+
+/**
+    New Dropdown Menu Popup
+ */
+.SA_dropdown-menu-popup {
+    position: absolute !important;
+    z-index: 300;
+    display: none;
+    height: fit-content;
+    max-height: 240px;
+    overflow-y: auto;
+}
+.SA_dropdown-menu-popup-visible {
+    display: block;
+}
+
+/* I suspect the "visible" class may no longer be used now that we show it on focus?
+.SA.dropdown-menu.visible > ul, */
+.SA.dropdown-menu > span:focus ~ ul
+{
+    /*visibility: visible;*/
+    /*opacity: 1;*/
+    overflow: auto;   /* had to hide it for OSX Safari so need to show it here */
+}
+
+.SA.dropdown-menu.right > ul {
+    right: 0;
+    padding-left: 0 !important;
+    min-width: 120px;
+}
+
+.SA.dropdown-menu.left > ul {
+    left: 0;
+    padding-left: 0 !important;
+}
+
+.SA.dropdown-menu > ul, .SA_dropdown-menu-popup {
+    top: 25px;
+    border-radius: 2px;
+    backdrop-filter: blur(9px);
+    padding: 0;
+    background: #ffffff8c;
+    border: 1px solid #d7d7d7;
+    margin: 0;
+}
+
+.SA.dropdown-menu.social > ul{
+    top: 35px;
+}
+
+.SA.dropdown-menu li, .SA_dropdown-menu-popup li {
+    height: 2em;
+    line-height: 2em;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    list-style: none;
+    margin-left: 0;
+    transition: background 300ms ease;
+    background: #ffffff8c;
+    padding: 2px 20px 5px 6px;
+}
+
+.SA.dropdown-menu li:not(:first-child), .SA_dropdown-menu-popup li:not(:first-child) {
+    border-top: none;
+}
+
+.SA.dropdown-menu li:hover, .SA_dropdown-menu-popup li:hover {
+    background: #bfbfbf4f;
+}
+
+.SA.dropdown-menu.dropdown-menu-fix > ul{
+    overflow: auto !important;
+    /*visibility: visible !important;*/
+    opacity: 1 !important;
+}
+
+.SA.dropdown-menu.social > span {
+    color: #25AAE1;
+    transition: background 420ms ease;
+/*    background: rgb(213 238 255 / 0%); */
+    box-sizing: border-box;
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+.SA.dropdown-menu li div .iconsmall, .SA_dropdown-menu-popup li div .iconsmall{
+    width: 20px !important;
+    height: 20px !important;
+    display: inline !important;
+    padding: 4px;
+}
+
+.SA.dropdown-menu.social li div span{
+    padding: 0px 11px;
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    transition: color 300ms ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 13px;
+}
+/*
+.SA.dropdown-menu.social > span:focus{
+    background: rgb(213 238 255 / 25%);
+}
+*/
+.SA.dropdown-menu > span:focus img{
+    filter: brightness(123%);
+}
+
+.SA.dropdown-menu.social > span img{
+    margin: auto;
+    display: block;
+}
+.SA.dropdown-menu.social > span img{
+    position: relative;
+}

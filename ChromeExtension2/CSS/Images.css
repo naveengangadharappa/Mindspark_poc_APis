@@ -1,0 +1,90 @@
+
+/* NOTE: sizes below must match the iconSizes array in Templates.php */
+
+img.thumbnailimage
+{
+   width: auto;
+   height: auto;
+   max-width: 30px;
+   max-height: 30px;
+}
+img.tinyimage
+{
+   width: auto;
+   height: auto;
+   max-width: 75px;
+   max-height: 75px;
+}
+img.smallimage
+{
+   width: auto;
+   height: auto;
+   max-width: 150px;
+   max-height: 150px;
+}
+img.mediumimage
+{
+   width: auto;
+   height: auto;
+   max-width: 300px;
+   max-height: 300px;
+}
+img.largeimage
+{
+   width: auto;
+   height: auto;
+   max-width: 450px;
+   max-height: 450px;
+}
+img.extralargeimage
+{
+   width: auto;
+   height: auto;
+   max-width: 600px;
+   max-height: 600px;
+}
+
+@media screen and (max-width: 736px)
+{
+   img.mediumimage
+   {
+      width: auto;
+      height: auto;
+      max-width: 300px;
+      max-height: 300px;
+   }
+   img.largeimage
+   {
+      width: auto;
+      height: auto;
+      max-width: 300px;
+      max-height: 300px;
+   }
+}
+
+img.iconsmall     /* icons on a data row, share buttons in the Web page footer */
+{
+   vertical-align: middle;
+   width: 30px;   /* this is usually used with SVGs which don't scale when using auto/auto */
+   height: auto;
+   max-height: 30px;
+}
+img.iconthumbnail /* icons on a data row */
+{
+   vertical-align: middle;
+   width: auto;
+   height: auto;
+   max-width: 50px;
+   max-height: 50px;
+}
+/* was used by Quizzes
+span.iconimage
+{
+   display: inline-block;
+   background-repeat: no-repeat;
+   background-size: contain;
+   width: 75px;
+   height: 75px;
+}
+*/
+

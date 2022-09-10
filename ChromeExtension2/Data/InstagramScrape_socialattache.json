@@ -1,0 +1,49 @@
+{
+	"status": "success",
+	"message": null,
+	"data":
+	{
+		"UserID": 500,
+		"SyncID": 6063,
+		"Created": "2021-01-01 00: 26: 12",
+		"DataName": "InstagramScrape",
+		"AccountID": "560147316",
+		"AccountName": "SaltyFoam",
+		"SyncTypes": ["message boxes","messages","contacts"],
+		"AccessToken": "unused",
+		"LastSynced": "2021-01-01 00: 26: 12",
+		"NextSync": null,
+		"SyncData": null,
+		"HasTask": 0,
+		"messages":
+		[
+			{
+				"Uid": 1,
+				"Type": "ig_post",
+				"Date": "2021-01-01 00:26:12",
+				"Body": "This is a test post.",
+				"Attachments": [
+					{
+						"Type": "image/jpeg",
+						"URL": "https://upload.wikimedia.org/wikipedia/commons/2/23/Lake_mapourika_NZ.jpeg"
+					}
+				]
+			},
+			{
+				"Uid": 2,
+				"Type": "ig_post",
+				"Date": "2021-01-01 00:26:12",
+				"Body": "This is a test post.",
+				"Attachments": [
+					{
+						"Type": "video/mp4",
+						"URL": "https://filesamples.com/samples/video/mp4/sample_960x540.mp4"
+					}
+				]
+			}
+		],
+		"contacts":
+		[
+		]
+	}
+}

@@ -1,0 +1,255 @@
+.SA .MultiSelect
+{
+   height: auto;
+}
+
+/* the SPAN version doesn't go full width and doesn't wrap and has round ends */
+.SA span.MultiSelect_Item,
+.SA span.MultiItem_Item
+{
+   border-radius: 15px;
+   display: inline-block;  /* so the right end doesn't get chopped off, also helps break-word work below */
+/*   white-space: nowrap; I found that sometimes tags got long with the path in them and we wanted them to wrap */
+   /* break words that are too long otherwise it the page gets wider than the browser */
+   word-wrap: break-word;
+   word-break: break-word;
+}
+/* the DIV and TABLE version goes full width and wraps as needed and has round corners */
+.SA div.MultiSelect_Item,
+.SA div.MultiItem_Item
+{
+   border-radius: 5px;
+}
+/* DRL FIXIT! This style for rounded table borders does not get applied for some reason, maybe due to COLSPAN=2?
+.SA tr.MultiSelect_Item,
+.SA tr.MultiItem_Item
+{
+   this just taken from an example to test this feature...
+   border: solid 1px #000;
+   border-style: solid none;
+   padding: 10px;
+   background-color: cyan;
+}
+.SA tr.MultiSelect_Item td:first-child,
+.SA tr.MultiItem_Item td:first-child
+{
+   border-left-style: solid;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+}
+.SA tr.MultiSelect_Item td:last-child,
+.SA tr.MultiItem_Item td:last-child
+{
+   border-right-style: solid;
+   border-bottom-right-radius: 5px;
+   border-top-right-radius: 5px;
+}
+*/
+.SA .MultiSelect_Item,
+.SA .MultiItem_Item
+{
+   border: 1px solid #bbb;
+   background: #f0f0f0;
+   padding: 4px 4px 4px 10px;
+   margin: 3px 3px 3px 0px;
+   font-size:85%;
+   color: #000;
+}
+
+.SA .MultiSelect_Item.active,
+.SA .MultiItem_Item.active
+{
+   opacity: 0.5;
+}
+/*
+.SA span.MultiItem_Item,
+.SA div.MultiItem_Item {
+   display:block;
+   padding:10px;
+   margin:5px 0;
+   position:relative;
+}
+*/
+
+.SA .TreeNode_Delete,
+.SA .MultiSelect_Drag,
+.SA .MultiSelect_Delete,
+.SA .MultiItem_Drag,
+.SA .MultiItem_Delete
+{
+   /* remove our styling for button tag*/
+   
+   line-height: normal;
+   color: initial;
+   height: auto;
+   opacity: initial;
+   background: initial;
+   padding: initial;
+   transition: initial;
+   
+   /* style for our purposes */
+   
+   border: none;
+   width: 20px;
+   height: 20px;
+   border-radius: 10px;
+   background-size: 20px 20px;
+   background-repeat: no-repeat;
+   background-position: center;
+   /*
+   margin-left: 2px;
+   margin-right: 2px;
+   vertical-align: middle;
+   */
+   float: right;
+   margin: 1px 0 0 10px;
+}
+.SA .TreeNode_Delete,
+.SA .MultiSelect_Delete,
+.SA .MultiItem_Delete
+{
+   background-image: url('chrome-extension://__MSG_@@extension_id__/v2/Skins/CancelDk.svg');
+}
+.SA .MultiSelect_Drag,
+.SA .MultiItem_Drag
+{
+   background-image: url('chrome-extension://__MSG_@@extension_id__/v2/Skins/DragVerticalDk.svg');
+}
+.SA .editable_enabled,
+.SA .MultiSelect_Item,
+.SA .MultiItem
+{
+   /* this allows our touch support to work on MS Edge */
+   touch-action: none;
+}
+.SA div.MultiItem_Item .MultiItem_Delete,
+.SA div.MultiSelect_Item .MultiSelect_Delete,
+.SA tr.MultiItem_Item > td .MultiItem_Delete,
+.SA tr.MultiSelect_Item > td .MultiSelect_Delete
+{
+   position: relative;
+   top: -3px;
+   right: 0px;
+}
+.SA div.MultiItem_Item .MultiItem_Drag,
+.SA div.MultiSelect_Item .MultiSelect_Drag,
+.SA tr.MultiItem_Item > td .MultiItem_Drag,
+.SA tr.MultiSelect_Item > td .MultiSelect_Drag
+{
+   position: relative;
+   top: -3px;
+   left: -15px;
+   float: left;
+}
+.SA span.MultiSelect_Item .MultiSelect_Drag
+{
+   position: relative;
+   float: left;
+   margin: 1px 10px 0 0;
+}
+
+.SA .MultiItem_Item > select,
+.SA .MultiItem_Item > input,
+.SA .MultiItem_Item > textarea,
+.SA .MultiItem_Item > div
+{
+   width:99.9% /*!important*/;
+}
+
+/* WideRow is a DIV "row" containing a label and span, with the span containing
+   the input field stretched to take all available space */
+.SA .WideRow
+{
+   padding-top: 10px;   /* looks better with spacing between rows */
+}
+.SA .WideRow > span
+{
+   display: block;
+   overflow: hidden;
+/*   padding-right: 5px;
+   padding-left: 10px;*/
+}
+.SA .WideRow > label
+{
+   float: left;
+}
+.SA .WideRow > span > select,
+.SA .WideRow > span > input,
+.SA .WideRow > span > textarea
+{
+   width:99.9% /*!important*/;
+}
+
+/* DRL FIXIT? This broke the main menu on the website view.
+.SA input[type="checkbox"]
+{
+   display: inline-block;
+   width: 16px !important;
+   height: 16px;
+   max-width: initial;
+   min-width: initial;
+   margin: -2px 0 0 0;
+   padding:0 0 0 14px !important;
+   vertical-align: middle;
+}
+*/
+/* remove the checkbox/radio color on some browsers (like newer Chrome it's blue) */
+.SA input[type='checkbox'],
+.SA input[type='radio']
+{
+   filter: grayscale(1)
+}
+
+/* the sizing of input text boxes is usually relative to the text box and any borders and such will be outside
+   and this messes up the spacing (sometimes making the text box bigger than the containing DIV) so we use this
+   style to use the outside as the size reference
+ */
+.SA input
+{
+   box-sizing: border-box;
+}
+
+.SA .StripeElement
+{
+   background-color:#ffffff;
+   border: 1px solid #cecece;
+   border-radius:5px;
+   padding:8px 5px; /* for some reason the Stripe element doesn't show as much padding so we increase it */
+}
+
+.SA .ResourceChooser_Top
+{
+   display: table;
+   height: 100%;
+}
+
+.SA .ResourceChooser_Image
+{
+   width: 49%; /* when visible, leave half the space for the filename */
+   display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+}
+
+.SA .ResourceChooser_Filename
+{
+   display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+   padding-bottom: 5px;
+}
+
+.SA .uploadProgress {
+   max-width: 100%;
+   height: 14px;
+   background: #25AAE1;
+   margin-bottom: 6px;
+   border-radius: 4px;
+}
+
+/* Used by dropzone to hide the drop control until needed. */
+.SA .editgrid .dz-message,
+.SA .edittree .dz-message
+{
+   display: none;
+}

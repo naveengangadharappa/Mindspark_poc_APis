@@ -1,0 +1,45 @@
+{
+	"status": "success",
+	"message": null,
+	"data":
+	{
+		"UserID": 500,
+		"SyncID": 6063,
+		"Created": "2021-01-01 00: 26: 12",
+		"DataName": "TikTokScrape",
+		"AccountID": "d4rkwolf66",
+		"AccountName": "William Moraes432",
+		"SyncTypes": ["message boxes","messages"],
+		"AccessToken": "unused",
+		"LastSynced": "2021-01-01 00: 26: 12",
+		"NextSync": null,
+		"SyncData": null,
+		"HasTask": 0,
+		"messages_":
+		[
+			{
+				"Type": "tt_msg",
+				"Uid": 1,
+				"Date": "2021-01-01 00:26:12",
+				"To": ["darkwolf66 <d4rkwolf_66@tkperid.socialattache.com>"],
+				"Body": "This is a test message.",
+				"Attachments": []
+			},
+			{
+				"Type": "tt_post",
+				"Uid": 1,
+				"Body": "Test Post",
+				"CanView": "private",
+				"AllowComments": true,
+				"AllowDuet": false,
+				"AllowStitch": false,
+				"Attachments": [
+					{
+						"Type": "video/mp4",
+						"URL": "http://vjs.zencdn.net/v/oceans.mp4"
+					}
+				]
+			}
+		]
+	}
+}

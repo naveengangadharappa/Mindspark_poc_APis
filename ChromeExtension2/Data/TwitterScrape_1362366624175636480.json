@@ -1,0 +1,32 @@
+{
+	"status": "success",
+	"message": null,
+	"data":
+	{
+		"UserID": 500,
+		"SyncID": 6063,
+		"Created": "2021-01-01 00: 26: 12",
+		"DataName": "TwitterScrape",
+		"AccountID": "560147316",
+		"AccountName": "SaltyFoam",
+		"SyncTypes": ["message boxes","messages"],
+		"AccessToken": "unused",
+		"LastSynced": "2021-01-01 00: 26: 12",
+		"NextSync": null,
+		"SyncData": null,
+		"HasTask": 0,
+		"messages":
+		[
+			{
+				"Uid": 1,
+				"Body": "Test Post",
+				"Attachments": [
+					{
+                        "Type": "image/jpeg",
+                        "URL": "https://scontent.frix2-1.fna.fbcdn.net/v/t1.0-9/149067506_2212416525557585_3758536409239667402_o.jpg?_nc_cat=104&ccb=3&_nc_sid=2c4854&_nc_ohc=TJ-fb3nO_XQAX-Gz7OS&_nc_ht=scontent.frix2-1.fna&oh=de4e249cb41de15a4efc7d3a6f1fdfa8&oe=604D3AD8"
+                    }
+				]
+			}
+		]
+	}
+}

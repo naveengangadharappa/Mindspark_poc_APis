@@ -1,0 +1,161 @@
+.SA .calendar
+{
+	font-family: 'Trebuchet MS', Tahoma, Verdana, Arial, sans-serif;
+	font-size: 0.9em;
+/*	background-color: #EEE;
+	color: #333; */
+	border: 1px solid #DDD;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	width: 99.9%;
+	padding: 5px 15px;
+	margin-top:10px;
+	box-sizing: border-box;
+}
+.SA .calendar a
+{
+	text-decoration: none;
+	outline: none;
+}
+.SA .calendar_enabler,
+.SA .calendar_timerow
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5em 0;
+}
+.SA .calendar .months,
+.SA .calendar_ok
+{
+	background-color: #25AAE1;
+	border: none;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	color: #FFF;
+	padding: 0.2em;
+	text-align: center;
+}
+.SA a.calendar_ok
+{
+	padding:3px 15px;
+}
+.SA a.calendar_ok:hover,
+.SA a.calendar_ok:active,
+.SA a.calendar_ok:focus
+{
+	background-color: #9CDEFF;
+}
+.SA .calendar .prev-month,
+.SA .calendar .next-month
+{
+	margin-top: 3px;
+	padding: 0;
+}
+.SA .calendar .prev-month
+{
+	float: left;
+}
+.SA .calendar .next-month
+{
+	float: right;
+}
+.SA .calendar .current-month
+{
+	margin: 0 auto;
+}
+.SA .calendar .months a
+{
+	color: #FFF;
+	padding: 0 0.4em;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.SA .calendar .months a:hover
+{
+}
+.SA .calendar table
+{
+	border-collapse: collapse;
+	padding: 0;
+	font-size: 0.8em;
+	width: 100%;
+}
+.SA .calendar th
+{
+	text-align: center;
+}
+.SA .calendar td
+{
+	text-align: right;
+	padding: 1px;
+	width: 14.3%;
+}
+.SA .calendar td a
+{
+	display: block;
+	text-decoration: none;
+	padding: 0.2em;
+
+	color: #83C3F3;
+	border: 1px solid #DDD;
+}
+.SA .calendar td a:hover,
+.SA .calendar td.selected a,
+.SA .calendar td.today a
+{
+}
+.SA .calendar td.available a
+{
+	background-color: #FFFFFF;
+	color: #25AAE1;
+}
+.SA .calendar td.not_available a
+{
+}
+.SA .calendar td.selected a
+{
+	color: #FFFFFF;
+	background-color: #25AAE1;
+}
+.SA .calendar td.today a
+{
+	border-radius: 50%;
+	border-color: #25AAE1;
+}
+.SA .calendar .calendar_time_column
+{
+  display: inline-block;
+  padding: 0 10px 0 10px;
+}
+.SA .calendar div.calendar_timerow
+{
+  text-align: center;
+}
+
+
+
+.SA .calendar_enabler label
+{
+   margin:0 30px 0 0;
+}
+
+.SA .calendar select,
+.SA .calendar input
+{
+   width:auto;
+   max-width: initial;
+   min-width: initial;
+   display:inline-block;
+   background-position: 95% 50%;
+   padding-right:20px;
+   margin:0 5px;
+}
+
+.SA .calendar table td
+{
+   text-align: center;
+}

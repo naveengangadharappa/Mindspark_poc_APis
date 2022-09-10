@@ -1,0 +1,142 @@
+#popup_window
+{
+	position: fixed;
+	z-index: 20000;
+	box-shadow: 8px 8px 5px #555; 
+	border: 2px solid #888;
+	background: #FFFFFF;	/* DRL FIXIT! If I don't specify a color it goes transparent. */
+}
+/* Make the parent window content disabled while the pop up is displayed by placing a grey overlay under the popup. */
+div#popup_window:before
+{
+   content: '';
+   position: absolute;
+   top: -1000px;
+   left: -1000px;
+   right: -1000px;
+   bottom: -1000px;
+   background: rgba(0, 0, 0, 0.1);
+   z-index: -1;
+}
+.popup_window_small
+{ 
+	left: 18%; top: 28%; right: 18%; bottom: 38%; 
+}
+.popup_window_medium
+{
+	left: 9%; top: 14%; right: 9%; bottom: 17%; 
+}
+.popup_window_narrow
+{
+	left: 22%; top: 8%; right: 22%; bottom: 12%; 
+}
+.popup_window_large
+{
+	left: 48px; top: 48px; right: 48px; bottom: 48px;
+}
+.popup_window_bottom_small
+{
+   left: 0px; height: 90px; right: 0px; bottom: 0px;
+}
+.popup_window_bottom_small  div#message_window_content
+{
+   bottom: 0px;   /* no "Close" button below so take up that space */
+}
+.popup_window_bottom_small  div#message_window_bottom
+{
+   display: none; /* hide "Close" button */
+}
+.popup_window_bottom_medium
+{
+   left: 0px; height: 200px; right: 0px; bottom: 0px;
+}
+.popup_window_bottom_large
+{
+   left: 0px; height: 300px; right: 0px; bottom: 0px;
+}
+#popup_window_shim
+{
+	width: 1px; min-height: 101vh; 
+}
+#popup_window > .window_header
+{
+    position:absolute;
+    display: block;
+}
+#popup_window_content
+{
+	position: absolute;
+    left: 0px; top: 40px; right: 0px; bottom: 0px;
+}
+
+/* This is to match with the Chrome extension case where we have no control over the body. */
+body:not(.app_page_body):not(.website_page_body):not(.landing_page_body):not(.layout_editor_page_body):not(.message_preview_body) #popup_window_content
+{
+    overflow: auto; /* this caused unnecessary vertical scrollbar on background site iframes but is required in
+                        the browser extension to show scrollbars in embedded forms */
+}
+body.has_popup_window
+{
+    overflow: hidden !important;  /* prevent scrolling in parent when popup is shown */
+/*     position: fixed; DRL This was causing the scroll position of the parent to be reset. */
+}
+
+/* not sure what this is for?? */
+body.has_popup_window .content_wrapper
+{
+    display:block !important;
+}
+
+
+#popup_frame_content
+{
+	position: absolute;
+    left: 0px; top: 32px; right: 0px; bottom: 0px;
+    overflow: auto;
+}
+.popup_window_full
+{
+	left: 0px; top: 0px; right: 0px; bottom: 0px; 
+}
+.popup_window_full #popup_header
+{
+	display: none; 
+}
+.popup_window_full #popup_window_content
+{
+	position: absolute;
+    left: 0px; top: 0px; right: 0px; bottom: 0px;
+    /*overflow-y: auto; -webkit-overflow-scrolling: touch;*/
+}
+/*
+#popup_header
+{
+   background: #25AAE1;
+   border-bottom: 2px solid #888;
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   right: 0px;
+   height: 30px;
+}
+
+#popup_header input
+{
+   background: url(chrome-extension://__MSG_@@extension_id__/v2/Skins/CloseWindow.svg) no-repeat center center;
+   background-size: cover;
+   border: unset;
+   width: 20px;
+   height: 20px;
+}
+*/
+#popup_web_window iframe {
+   /* we have to undo some styling applied to iframe in MainLayout.css */
+   box-sizing: content-box;
+   border: none;
+   border-radius: 0px;
+   padding: 0px;
+/*   width: auto; */
+   margin: 0px;
+   height:100%;
+   width:100%;
+}

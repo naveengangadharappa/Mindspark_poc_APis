@@ -1,0 +1,18 @@
+.SA_tags {
+    margin-top: 5px;
+    max-width: 50%;     /* DRL FIXIT? The tags will push the width and get clipped so we set a maximum
+                           width to force wrapping but this is not ideal as in many screen widths we'll
+                           still have unused space or clipped tags. */
+}
+
+/* this should be similar to MultiItem_Item */
+.SA_tags div {
+    display: inline-block;
+    border-radius: 15px;
+    border: 1px solid #bbb;
+    background: #f0f0f0;
+    padding: 4px 10px 4px 10px;
+    margin: 3px 3px 3px 0px;
+    font-size:85%;
+    color: #000;
+}
