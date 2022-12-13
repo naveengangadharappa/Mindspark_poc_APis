@@ -14,7 +14,7 @@ app.use('/test',(req,res)=>{
     console.log("Connected to Heroku");
     res.json({status:true,message:"Heroku Connected Successfully"});
 });
-const server = app.listen(process.env.PORT || 8080, () => {
+const server = app.listen(process.env.PORT || 3000, () => {
     const port = server.address().port;
     console.log(`Express is working on port ${port}`);
   });
