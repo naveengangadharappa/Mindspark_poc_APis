@@ -2,7 +2,11 @@ let express = require('express');
 let app = express();
 const cors = require('cors');
 const path = require('path');
-app.use(cors()); 
+app.use(cors({
+    origin: "*",
+    methods: "GET,POST",
+    preflightContinue: false,
+})); 
 
 app.use('/chrome', express.static(path.join(__dirname, '/ChromeExtension2')));
 app.use('/', express.static(path.join(__dirname, '/offline')));
