@@ -1,0 +1,116 @@
+{
+    "resultCode":"C001",
+    "resultMessage":"Success",
+    "sessionInformation":{
+    "sessionID":"5f1575c27e60095d246813f9",
+    "sessionStartAt":"2022-11-07 15:28:06",
+    "sessionType":"Home"
+    },
+    "passwordTypeChanged":false,
+    "userInformation":{
+    "name":"User name",
+    "avatar":"https:\\\/\\\/mindspark-rearch-assets.s3.amazonaws.com\\\/profileImages\\\/5a4b384f421aa968a15d6d23.png?1548159947.9366",
+    "section":"A",
+    "grade":4,
+    "gender":"male",
+    "language":"en-IN",
+    "isRetail":false,
+    "selectedTheme":"lowergrade",
+    "groupID":"TEST_GROUP",
+    "profileProgress":45
+    },
+    "redirectionData":{
+    "endTopicFlag":false,
+    "endTopicHigherLevel":false,
+    "userTriggered":false,
+    "sessionTimeExceededFlag":false
+    },
+    "redirectionCode":null,
+    "contentHeaderInfo":{
+    "pedagogyID":"DUMMY_PEDAGOGY_ID",
+    "pedagogyType":"topic",
+    "pedagogyStatus":"in-progress",
+    "pedagogyProgress":{
+    "currentUnitNum":1,
+    "totalUnits":1,
+    "unitList":[
+    {
+    "unitID":"59d98cfd1c5edc24e4024ce7",
+    "unitName":"Content Preview",
+    "unitType":"concept",
+    "unitStatus":"in-progress"
+    }
+    ]
+    },
+    "pedagogyMessages":[
+    "sdlCarefulMsg"
+    ],
+    "pedagogyHigherLevelStatus":null,
+    "higherLevelStatus":null,
+    "attemptNumber":1,
+    "pedagogyChild":{
+    "id":"59d98cfd1c5edc24e4024ce7",
+    "type":"concept",
+    "progress":[
+    {
+    "id":"",
+    "state":"in-progress"
+    }
+    ],
+    "name":""
+    },
+    "rewardInfo":{
+    "sparkie":0
+    },
+    "topicIcon":"",
+    "pedagogyName":"Regular Question",
+    "dueDate":null
+    },
+    "noRewardAlertFlag":false,
+    "contentData":{
+    "contentId":"5f1575c27e60095d246813f9",
+    "contentMode":"regular",
+    "contentParams":[
+    ],
+    "contentSeqNum":1,
+    "contentSubMode":"regular",
+    "contentTranslationFlag":false,
+    "contentType":"question",
+    "data":[
+    {
+    "_id":"5f1575c27e60095d246813f9_en-IN_1",
+    "langCode":"en-IN",
+    "questionBody":"<iframe id='quesInteractive' src='https:\/\/d2tl1spkm4qpax.cloudfront.net\/Enrichment_Modules\/html5\/questions\/FLN\/FLN_NumberBeforeAfter\/src\/index.html?level=1&help=0&stemAudio=G_alphabet.mp3&showIntro=0&numbers=BLANK&options=g|n|c|r&PID=MSE&language=en-IN&language=&timeStamp=1667815086551' height='600px' width='800px' frameborder='0' scrolling='no'><\/iframe>",
+    "quesVoiceover":"https:\/\/mindspark-lang.s3.amazonaws.com\/qtypes\/sounds_english\/Listen and choose the correct letter.mp3",
+    "response":[
+    ],
+    "explanation":"PGlmcmFtZSBpZD0ncXVlc0ludGVyYWN0aXZlJyBzcmM9J2h0dHBzOi8vZDJ0bDFzcGttNHFwYXguY2xvdWRmcm9udC5uZXQvRW5yaWNobWVudF9Nb2R1bGVzL2h0bWw1L3F1ZXN0aW9ucy9GTE4vRkxOX051bWJlckJlZm9yZUFmdGVyL3NyYy9pbmRleC5odG1sP2xldmVsPTEmaGVscD0wJnN0ZW1BdWRpbz1HX2FscGhhYmV0Lm1wMyZzaG93SW50cm89MCZudW1iZXJzPUJMQU5LJm9wdGlvbnM9Z3xufGN8ciZQSUQ9TVNFJmxhbmd1YWdlPWVuLUlOJmRpc3BsYXlBbnM9MSZsYW5ndWFnZT0mdGltZVN0YW1wPTE2Njc4MTUwODY1NTAnIGhlaWdodD0nNjAwcHgnIHdpZHRoPSc4MDBweCcgZnJhbWVib3JkZXI9JzAnIHNjcm9sbGluZz0nbm8nPjwvaWZyYW1lPg==",
+    "explVoiceover":"",
+    "tags":[
+    ],
+    "revisionNo":1,
+    "isDynamic":false,
+    "hints":[
+    ],
+    "conditions":[
+    ],
+    "glossary":[
+    ],
+    "contentID":"5f1575c27e60095d246813f9",
+    "template":"Interactive",
+    "templateFile":"Interactive.js",
+    "trials":1,
+    "createdAt":"2022-11-07 15:28:06",
+    "updatedAt":"2022-11-07 15:28:06",
+    "showEditorTool":0,
+    "type":"I",
+    "encrypted":true,
+    "attributes":[
+    ],
+    "qcode":"19785",
+    "contentType":"question"
+    }
+    ]
+    }
+    }
+    

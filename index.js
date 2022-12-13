@@ -4,7 +4,8 @@ const cors = require('cors');
 const path = require('path');
 app.use(cors()); 
 
-app.use('/', express.static(path.join(__dirname, '/ChromeExtension2')));
+app.use('/chrome', express.static(path.join(__dirname, '/ChromeExtension2')));
+app.use('/', express.static(path.join(__dirname, '/offline')));
 app.use('/test',(req,res)=>{
     console.log("Connected to Heroku");
     res.json({status:true,message:"Heroku Connected Successfully"});
